@@ -1,0 +1,7 @@
+Rename to .contentful.json and replace this file with the below
+containing the space ID and the content delivery API token:
+
+{
+  "spaceId": "",
+  "accessToken": ""
+}
