@@ -5,7 +5,7 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
   return new Promise((resolve, reject) => {
-    // const blogPost = path.resolve("./src/templates/blog-post.js")
+    const chapterTemplate = path.resolve("./src/templates/chapter.tsx")
     resolve(
       graphql(
         `
@@ -15,6 +15,15 @@ exports.createPages = ({ graphql, actions }) => {
                 node {
                   chapterName
                   chapterSlug
+                  chapterCopy {
+                    json
+                  }
+                  chapterSections {
+                    sectionTitle
+                    sectionCopy {
+                      json
+                    }
+                  }
                 }
               }
             }
@@ -29,17 +38,18 @@ exports.createPages = ({ graphql, actions }) => {
         const chapters = result.data.allContentfulChapter.edges
         console.log("\n Found Chapters: " + chapters.length)
         chapters.forEach((chapter, index) => {
-          console.log("Name: " + chapter.node.chapterName)
+          console.log("Name: " + chapter.node.chapterName + "\n")
+          console.log("Slug: " + chapter.node.chapterSlug + "\n")
         })
-        // posts.forEach((post, index) => {
-        //   createPage({
-        //     path: `/chapter/${post.node.slug}/`,
-        //     component: blogPost,
-        //     context: {
-        //       slug: post.node.slug
-        //     },
-        //   })
-        // })
+        chapters.forEach((chapter, index) => {
+          createPage({
+            path: `/chapter/${chapter.node.chapterSlug}/`,
+            component: chapterTemplate,
+            context: {
+              slug: chapter.node.chapterSlug
+            }
+          })
+        })
       })
     )
   })

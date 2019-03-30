@@ -22,8 +22,8 @@ if (!spaceId || !accessToken) {
 
 module.exports = {
   siteMetadata: {
-    name: `Hello Typescript World!`,
-    tagline: `Gatsby + SASS + Typescript = 💪`
+    name: `Crypto eBook`,
+    tagline: `Get to Know Crypto`
   },
   plugins: [
     `gatsby-plugin-sass`,
