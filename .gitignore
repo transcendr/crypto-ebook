@@ -64,3 +64,4 @@ yarn-error.log
 README.html
 
 .vscode
+.contentful.json
