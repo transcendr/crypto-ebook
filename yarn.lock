@@ -769,6 +769,18 @@
     follow-redirects "^1.2.5"
     is-buffer "^1.1.5"
 
+"@contentful/rich-text-react-renderer@^13.2.0":
+  version "13.2.0"
+  resolved "https://registry.yarnpkg.com/@contentful/rich-text-react-renderer/-/rich-text-react-renderer-13.2.0.tgz#19b11b981c3a0d9eaa581a9e1c2c392c812bea7e"
+  integrity sha512-4hR1XgrePX/GlLtaHYrZ7ZtrTGm67MfiVfchP7li0Dbp8sVqFY+VgN/+ejxi/uB3uk1itLzCzQfrL0xFzZDlwg==
+  dependencies:
+    "@contentful/rich-text-types" "^13.1.0"
+
+"@contentful/rich-text-types@^13.1.0":
+  version "13.1.0"
+  resolved "https://registry.yarnpkg.com/@contentful/rich-text-types/-/rich-text-types-13.1.0.tgz#a329b68bb3560514ffcbe07dc115af938a60f201"
+  integrity sha512-/fwELDysqdZdhTW9tLUOtpoBnlaI6WVxtrrmB+lAbYkoC7G9NVaOPwxXqwYidgTl9I1ZJGfU/ZEr8GDyUIcZWg==
+
 "@gatsbyjs/relay-compiler@2.0.0-printer-fix.2":
   version "2.0.0-printer-fix.2"
   resolved "https://registry.yarnpkg.com/@gatsbyjs/relay-compiler/-/relay-compiler-2.0.0-printer-fix.2.tgz#214db0e6072d40ea78ad5fabdb49d56bc95f4e99"
@@ -854,6 +866,11 @@
   resolved "https://registry.yarnpkg.com/@types/history/-/history-4.7.2.tgz#0e670ea254d559241b6eeb3894f8754991e73220"
   integrity sha512-ui3WwXmjTaY73fOQ3/m3nnajU/Orhi6cEu5rzX+BrAAJxa3eITXZ5ch9suPqtM03OWhAHhPSyBGCN4UKoxO20Q==
 
+"@types/lodash@^4.14.123":
+  version "4.14.123"
+  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.123.tgz#39be5d211478c8dd3bdae98ee75bb7efe4abfe4d"
+  integrity sha512-pQvPkc4Nltyx7G1Ww45OjVqUsJP4UsZm+GWJpigXgkikZqJgRm4c48g027o6tdgubWHwFRF15iFd+Y4Pmqv6+Q==
+
 "@types/minimatch@*":
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/@types/minimatch/-/minimatch-3.0.3.tgz#3dca0e3f33b200fc7d1139c0cd96c1268cadfd9d"
@@ -890,6 +907,13 @@
   integrity sha512-Zp0AdVhoJXjwsgp8pDPVEMnAH5eHU64hi5EnPT1Jerddqwiy0O87KFrnZKd1DKdO87cU120n2d3SnKKPtf4wFA==
   dependencies:
     "@types/history" "*"
+    "@types/react" "*"
+
+"@types/react-helmet@^5.0.8":
+  version "5.0.8"
+  resolved "https://registry.yarnpkg.com/@types/react-helmet/-/react-helmet-5.0.8.tgz#f080eea6652e44f60b4574463d238f268d81d9af"
+  integrity sha512-ZTr12eDAYI0yUiMx1K82EHqRYa8J1BOOLus+0gL+AkksUiIPwLE0wLiXa9FNqD8r9GXAi+yRPZImkRh1JNlTkQ==
+  dependencies:
     "@types/react" "*"
 
 "@types/react@*":
