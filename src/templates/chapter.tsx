@@ -28,7 +28,7 @@ class ChapterTemplate extends React.Component<ChapterTemplateProps, {}> {
     return (
       <div>
         <Helmet title={`${post.chapterName} | ${siteTitle}`} />
-        <h1 className="section-headline">{post.chapterName}</h1>
+        <h1>{post.chapterName}</h1>
         {documentToReactComponents(post.chapterCopy.json)}
         {post.chapterSections.map((section: any) => {
           return (
