@@ -2,6 +2,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { graphql } from "gatsby"
 import * as React from "react"
 import Helmet from "react-helmet"
+import ChapterNavSidebar from "../components/ChapterNavSidebar"
 
 interface ChapterTemplateProps {
   data: {
@@ -26,8 +27,11 @@ class ChapterTemplate extends React.Component<ChapterTemplateProps, {}> {
     const { name: siteTitle } = data.site.siteMetadata
 
     return (
-      <div>
+      <div className="page-chapter">
         <Helmet title={`${post.chapterName} | ${siteTitle}`} />
+
+        <ChapterNavSidebar />
+
         <h1>{post.chapterName}</h1>
         {documentToReactComponents(post.chapterCopy.json)}
         {post.chapterSections.map((section: any) => {
