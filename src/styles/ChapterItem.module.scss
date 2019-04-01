@@ -1,0 +1,38 @@
+@import "./shared.module.scss";
+
+.chapter_item {
+  text-decoration: none;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.66667rem;
+  }
+
+  &__num {
+    position: relative;
+    display: inline-block;
+    margin: 0 1rem 0 0;
+    font-size: $fs-4;
+    font-weight: $fw-bold;
+    color: $c-primary;
+    transition: color 0.25s ease;
+    .isActive &,
+    .chapter_item:hover & {
+      color: $c-primary;
+    }
+  }
+
+  &__title {
+    margin: 0 0 2.778rem;
+    font-size: $fs-2;
+    font-weight: $fw-semibold;
+    line-height: 2rem;
+    color: $c-grey-light;
+    transition: color 0.25s ease;
+    .isActive &,
+    .chapter_item:hover & {
+      color: $c-text;
+    }
+  }
+}

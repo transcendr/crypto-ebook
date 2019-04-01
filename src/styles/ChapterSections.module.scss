@@ -1,0 +1,35 @@
+@import "./shared.module.scss";
+
+.chapter_sections {
+  list-style: none;
+  padding: 0;
+}
+
+.chapter_section {
+  position: relative;
+
+  &__btn {
+    display: block;
+    padding: 1em 0;
+    text-align: left;
+    font-size: $fs-0;
+    font-weight: $fw-semibold;
+    color: $c-grey-light;
+    transition: color 0.2s ease;
+    cursor: pointer;
+    &:hover,
+    &.isActive & {
+      color: $c-black;
+    }
+  }
+
+  &isActive::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: 0;
+    bottom: 5px;
+    width: 1px;
+    background-color: $c-primary;
+  }
+}

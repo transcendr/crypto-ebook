@@ -1,0 +1,32 @@
+@import "./shared.module.scss";
+
+$sidebar-width: 25vw;
+$sidebar-max-width: 420px;
+
+.page_chapter {
+  @media (min-width: $screen-md-min) {
+    & {
+      display: flex;
+    }
+  }
+  &__mobile_nav {
+    @media (min-width: $screen-md-min) {
+      display: none;
+    }
+  }
+  &__sidebar_nav {
+    display: none;
+    width: 25vw;
+    border-right: 1px solid $c-grey-very-light;
+  }
+  &__sidebar_nav {
+    @media (min-width: $screen-md-min) {
+      display: block;
+    }
+  }
+  &__sidebar_nav {
+    @media (min-width: $screen-lg-min) {
+      max-width: 420px;
+    }
+  }
+}
