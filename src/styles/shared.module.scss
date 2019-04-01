@@ -42,9 +42,7 @@ $screen-lg-min: 1440px;
 // Animations & Easings
 $base-easing: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
-html {
-  font-family: $ff-base;
-}
+@import "./reset.module.scss";
 
 .Container {
   max-width: 60rem;

@@ -1,5 +1,57 @@
 @import "./shared.module.scss";
 
-.sidebar_nav__arrows {
+.sidebar_nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  overflow-y: auto;
+  background: white;
+
+  &__content {
+    position: relative;
+    min-height: 100%;
+    padding: (0.75 * $base-sizing) 15px 6rem 55px;
+  }
+  &__arrows {
+    margin-top: (1.5 * $base-sizing);
+    height: 18px;
+  }
+  &__chapters {
+    margin-top: (0.5 * $base-sizing);
+  }
+  &__chapter:not(:last-child) {
+    margin-bottom: 50px;
+  }
+  &__company_logo {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+.chapter_sections {
+  position: absolute;
+  width: 100%;
+  top: 250px;
+  padding: 0 70px 0 0;
+  &.fade-right-leave-active {
+    transition-delay: 0.25s;
+  }
+}
+
+.chapter_section {
+  margin: 5px 0;
+}
+
+.chapter_item {
+  transition: all 1s;
   display: block;
+  cursor: pointer;
+  &__show_all {
+    display: inline-block;
+    font-size: $fs-0;
+    font-weight: $fw-bold;
+    color: $c-grey-light;
+    cursor: pointer;
+  }
 }

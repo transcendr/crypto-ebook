@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import * as React from "react"
 import Helmet from "react-helmet"
 import ChapterNavSidebar from "../components/ChapterNavSidebar"
+import * as styles from "../styles/Chapter.module.scss"
 
 interface ChapterTemplateProps {
   data: {
@@ -14,7 +15,9 @@ interface ChapterTemplateProps {
     }
     contentfulChapter: {
       chapterName: string
-      chapterCopy: any
+      chapterCopy: {
+        json: any
+      }
       chapterSections: any[]
     }
   }
@@ -28,25 +31,27 @@ interface ChapterTemplateProps {
 class ChapterTemplate extends React.Component<ChapterTemplateProps, {}> {
   public render() {
     const { data, pageContext } = this.props
-    const { contentfulChapter: post } = data
+    const { contentfulChapter: chapter } = data
     const { name: siteTitle } = data.site.siteMetadata
 
     return (
-      <div className="page-chapter">
-        <Helmet title={`${post.chapterName} | ${siteTitle}`} />
+      <div className={styles.page_chapter}>
+        <Helmet title={`${chapter.chapterName} | ${siteTitle}`} />
 
-        <ChapterNavSidebar context={pageContext} />
+        <ChapterNavSidebar context={pageContext} chapter={chapter} />
 
-        <h1>{post.chapterName}</h1>
-        {documentToReactComponents(post.chapterCopy.json)}
-        {post.chapterSections.map((section: any) => {
-          return (
-            <div key={section.id}>
-              <h2>{section.sectionTitle}</h2>
-              {documentToReactComponents(section.sectionCopy.json)}
-            </div>
-          )
-        })}
+        <div style={{ display: "block" }}>
+          <h1>{chapter.chapterName}</h1>
+          {documentToReactComponents(chapter.chapterCopy.json)}
+          {chapter.chapterSections.map((section: any) => {
+            return (
+              <div key={section.id}>
+                <h2>{section.sectionTitle}</h2>
+                {documentToReactComponents(section.sectionCopy.json)}
+              </div>
+            )
+          })}
+        </div>
       </div>
     )
   }
