@@ -1,8 +1,10 @@
+@import url("https://fonts.googleapis.com/css?family=Lato");
+
 // Typography
 $base-sizing: 2rem;
 $base-small-sizing: 0.5rem;
 
-$ff-base: Helvetica;
+$ff-base: Lato, Helvetica;
 $ff-serif: Georgia, sans-serif;
 
 $fs-0: 12px;
@@ -39,6 +41,10 @@ $screen-lg-min: 1440px;
 
 // Animations & Easings
 $base-easing: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+html {
+  font-family: $ff-base;
+}
 
 .Container {
   max-width: 60rem;

@@ -42,13 +42,15 @@ exports.createPages = ({ graphql, actions }) => {
           console.log("Slug: " + chapter.node.chapterSlug + "\n")
         })
         chapters.forEach((chapter, index) => {
-          const order = index++
+          let order = index + 1
+          order = order < 10 ? `0${order}` : `${order}`
           createPage({
             path: `/chapter/${chapter.node.chapterSlug}/`,
             component: chapterTemplate,
             context: {
               slug: chapter.node.chapterSlug,
-              order
+              chapterName: chapter.node.chapterName,
+              chapterNumber: order
             }
           })
         })

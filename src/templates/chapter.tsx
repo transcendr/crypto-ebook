@@ -20,7 +20,8 @@ interface ChapterTemplateProps {
   }
   pageContext: {
     slug: string
-    order: number
+    chapterName: string
+    chapterNumber: string
   }
 }
 
