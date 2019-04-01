@@ -2,6 +2,8 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { graphql } from "gatsby"
 import * as React from "react"
 import Helmet from "react-helmet"
+import ChapterNavSidebar from "../components/ChapterNavSidebar"
+import * as styles from "../styles/Chapter.module.scss"
 
 interface ChapterTemplateProps {
   data: {
@@ -13,31 +15,43 @@ interface ChapterTemplateProps {
     }
     contentfulChapter: {
       chapterName: string
-      chapterCopy: any
+      chapterCopy: {
+        json: any
+      }
       chapterSections: any[]
     }
+  }
+  pageContext: {
+    slug: string
+    chapterName: string
+    chapterNumber: string
   }
 }
 
 class ChapterTemplate extends React.Component<ChapterTemplateProps, {}> {
   public render() {
-    const { data } = this.props
-    const { contentfulChapter: post } = data
+    const { data, pageContext } = this.props
+    const { contentfulChapter: chapter } = data
     const { name: siteTitle } = data.site.siteMetadata
 
     return (
-      <div>
-        <Helmet title={`${post.chapterName} | ${siteTitle}`} />
-        <h1>{post.chapterName}</h1>
-        {documentToReactComponents(post.chapterCopy.json)}
-        {post.chapterSections.map((section: any) => {
-          return (
-            <div key={section.id}>
-              <h2>{section.sectionTitle}</h2>
-              {documentToReactComponents(section.sectionCopy.json)}
-            </div>
-          )
-        })}
+      <div className={styles.page_chapter}>
+        <Helmet title={`${chapter.chapterName} | ${siteTitle}`} />
+
+        <ChapterNavSidebar context={pageContext} chapter={chapter} />
+
+        <div style={{ display: "block" }}>
+          <h1>{chapter.chapterName}</h1>
+          {documentToReactComponents(chapter.chapterCopy.json)}
+          {chapter.chapterSections.map((section: any) => {
+            return (
+              <div key={section.id}>
+                <h2>{section.sectionTitle}</h2>
+                {documentToReactComponents(section.sectionCopy.json)}
+              </div>
+            )
+          })}
+        </div>
       </div>
     )
   }

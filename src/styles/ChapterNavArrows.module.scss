@@ -1,0 +1,18 @@
+@import "./shared.module.scss";
+
+.arrows {
+  display: flex;
+}
+
+.arrow a {
+  color: $c-grey-light;
+
+  &.isDisabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+
+.arrow + .arrow {
+  margin-left: 0.7rem;
+}
