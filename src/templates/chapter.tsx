@@ -18,11 +18,15 @@ interface ChapterTemplateProps {
       chapterSections: any[]
     }
   }
+  pageContext: {
+    slug: string
+    order: number
+  }
 }
 
 class ChapterTemplate extends React.Component<ChapterTemplateProps, {}> {
   public render() {
-    const { data } = this.props
+    const { data, pageContext } = this.props
     const { contentfulChapter: post } = data
     const { name: siteTitle } = data.site.siteMetadata
 
@@ -30,7 +34,7 @@ class ChapterTemplate extends React.Component<ChapterTemplateProps, {}> {
       <div className="page-chapter">
         <Helmet title={`${post.chapterName} | ${siteTitle}`} />
 
-        <ChapterNavSidebar />
+        <ChapterNavSidebar context={pageContext} />
 
         <h1>{post.chapterName}</h1>
         {documentToReactComponents(post.chapterCopy.json)}

@@ -3,11 +3,20 @@ import * as styles from "../styles/ChapterNavSidebar.module.scss"
 import ChapterNavArrows from "./ChapterNavArrows"
 import ExitButton from "./ExitButton"
 
+interface ChapterNavSidebarProps {
+  context: {
+    slug: string
+    order: number
+  }
+}
 interface ChapterNavSidebarState {
   isSingleChapterVisible: string
 }
 
-class ChapterNavSidebar extends React.Component<{}, ChapterNavSidebarState> {
+class ChapterNavSidebar extends React.Component<
+  ChapterNavSidebarProps,
+  ChapterNavSidebarState
+> {
   constructor(props: {}) {
     super(props)
     this.state = {
@@ -24,7 +33,6 @@ class ChapterNavSidebar extends React.Component<{}, ChapterNavSidebarState> {
           <div className={styles.sidebar_nav__arrows}>
             <ChapterNavArrows visible={true} />
           </div>
-          <p>Nav Sidebar</p>
         </div>
       </div>
     )
