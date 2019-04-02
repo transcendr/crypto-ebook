@@ -8,7 +8,7 @@
     "dev": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "postinstall": "pwd && ls"
+    "postinstall": "sh ./_deploy/post-install.sh"
   },
   "dependencies": {
     "@babel/core": "^7.3.4",
