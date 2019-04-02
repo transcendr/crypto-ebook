@@ -50,6 +50,10 @@ exports.createPages = ({ graphql, actions }) => {
           let chapterNumber = index + 1
           chapterNumber =
             chapterNumber < 10 ? `0${chapterNumber}` : `${chapterNumber}`
+          let prevChapter = index > 0 ? chapters[index - 1].node : null
+          let nextChapter = !!chapters[index + 1]
+            ? chapters[index + 1].node
+            : null
           // Generate static pages
           createPage({
             path: `/chapter/${chapterSlug}/`,
@@ -57,7 +61,9 @@ exports.createPages = ({ graphql, actions }) => {
             context: {
               slug: chapterSlug,
               chapterNumber,
-              course
+              course,
+              prevChapter,
+              nextChapter
             }
           })
         })

@@ -2,6 +2,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { graphql } from "gatsby"
 import * as React from "react"
 import Helmet from "react-helmet"
+import { ContentfulChapter } from "../@types"
 import ChapterNavSidebar from "../components/ChapterNavSidebar"
 import * as styles from "../styles/Chapter.module.scss"
 
@@ -13,13 +14,7 @@ interface ChapterTemplateProps {
         tagline: string
       }
     }
-    contentfulChapter: {
-      chapterName: string
-      chapterCopy: {
-        json: any
-      }
-      chapterSections: any[]
-    }
+    contentfulChapter: ContentfulChapter
   }
   pageContext: {
     slug: string
@@ -27,6 +22,8 @@ interface ChapterTemplateProps {
     course: {
       courseName: string
     }
+    prevChapter: ContentfulChapter
+    nextChapter: ContentfulChapter
   }
 }
 
@@ -83,6 +80,7 @@ export const pageQuery = graphql`
       }
     }
     contentfulChapter(chapterSlug: { eq: $slug }) {
+      chapterSlug
       chapterName
       chapterCopy {
         json
