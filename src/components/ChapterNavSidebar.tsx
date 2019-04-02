@@ -4,11 +4,13 @@ import * as styles from "../styles/ChapterNavSidebar.module.scss"
 import ChapterItem from "./ChapterItem"
 import ChapterNavArrows from "./ChapterNavArrows"
 import ChapterSections from "./ChapterSections"
+import CompanyLogo from "./CompanyLogo"
 import ExitButton from "./ExitButton"
 
 interface SectionType {
   id: string
   sectionTitle: string
+  sectionSlug: string
 }
 interface ChapterNavSidebarProps {
   context: {
@@ -53,12 +55,13 @@ class ChapterNavSidebar extends React.Component<
           <ExitButton />
           <div className={styles.sidebar_nav__arrows}>
             <ChapterNavArrows visible={true} />
-            <ChapterItem
-              _number={context.chapterNumber}
-              name={chapter.chapterName}
-            />
-            <ChapterSections sections={chapter.chapterSections} />
           </div>
+          <ChapterItem
+            _number={context.chapterNumber}
+            name={chapter.chapterName}
+          />
+          <ChapterSections sections={chapter.chapterSections} />
+          <CompanyLogo />
         </div>
       </div>
     )
