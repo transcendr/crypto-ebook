@@ -18,7 +18,8 @@
           "typeLiterals": "ignore"
         }
       }
-    ]
+    ],
+    "no-console": [false, "log", "error"]
   },
   "rulesDirectory": []
 }

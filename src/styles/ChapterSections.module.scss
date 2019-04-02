@@ -8,7 +8,7 @@
 .chapter_section {
   position: relative;
 
-  &__btn {
+  a {
     display: block;
     padding: 1em 0;
     text-align: left;
@@ -17,19 +17,23 @@
     color: $c-grey-light;
     transition: color 0.2s ease;
     cursor: pointer;
-    &:hover,
-    &.isActive & {
-      color: $c-black;
-    }
   }
 
-  &isActive::before {
-    content: "";
-    position: absolute;
-    top: 5px;
-    right: 0;
-    bottom: 5px;
-    width: 1px;
-    background-color: $c-primary;
+  a:hover {
+    color: $c-black;
   }
+
+  &__isActive {
+    color: $c-black !important;
+  }
+
+  // &isActive::before {
+  //   content: "";
+  //   position: absolute;
+  //   top: 5px;
+  //   right: 0;
+  //   bottom: 5px;
+  //   width: 1px;
+  //   background-color: $c-primary;
+  // }
 }
