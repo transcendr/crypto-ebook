@@ -23,8 +23,10 @@ interface ChapterTemplateProps {
   }
   pageContext: {
     slug: string
-    chapterName: string
     chapterNumber: string
+    course: {
+      courseName: string
+    }
   }
 }
 
@@ -40,18 +42,31 @@ class ChapterTemplate extends React.Component<ChapterTemplateProps, {}> {
 
         <ChapterNavSidebar context={pageContext} chapter={chapter} />
 
-        <div style={{ display: "block" }}>
-          <h1>{chapter.chapterName}</h1>
-          {documentToReactComponents(chapter.chapterCopy.json)}
-          {chapter.chapterSections.map((section: any) => {
-            return (
-              <div key={section.id}>
-                <h2>{section.sectionTitle}</h2>
-                {documentToReactComponents(section.sectionCopy.json)}
+        <article className={styles.chapter_container}>
+          <div className={styles.chapter}>
+            <div className={styles.chapter__book_title}>
+              {pageContext.course.courseName}
+            </div>
+            <div className={styles.chapter__number}>
+              {pageContext.chapterNumber}
+            </div>
+
+            <div className={styles.chapter__content}>
+              <div className={`${styles.content} ${styles.custom}`}>
+                <h1>{chapter.chapterName}</h1>
+                {documentToReactComponents(chapter.chapterCopy.json)}
+                {chapter.chapterSections.map((section: any) => {
+                  return (
+                    <div key={section.id}>
+                      <h2>{section.sectionTitle}</h2>
+                      {documentToReactComponents(section.sectionCopy.json)}
+                    </div>
+                  )
+                })}
               </div>
-            )
-          })}
-        </div>
+            </div>
+          </div>
+        </article>
       </div>
     )
   }

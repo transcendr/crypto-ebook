@@ -24,6 +24,9 @@ exports.createPages = ({ graphql, actions }) => {
                       json
                     }
                   }
+                  course {
+                    courseName
+                  }
                 }
               }
             }
@@ -40,9 +43,10 @@ exports.createPages = ({ graphql, actions }) => {
         chapters.forEach((chapter, index) => {
           console.log("Name: " + chapter.node.chapterName + "\n")
           console.log("Slug: " + chapter.node.chapterSlug + "\n")
+          console.log("Course: " + chapter.node.course.courseName + "\n")
         })
         chapters.forEach((chapter, index) => {
-          const { chapterSlug } = chapter.node
+          const { chapterSlug, course } = chapter.node
           let chapterNumber = index + 1
           chapterNumber =
             chapterNumber < 10 ? `0${chapterNumber}` : `${chapterNumber}`
@@ -52,7 +56,8 @@ exports.createPages = ({ graphql, actions }) => {
             component: chapterTemplate,
             context: {
               slug: chapterSlug,
-              chapterNumber
+              chapterNumber,
+              course
             }
           })
         })
