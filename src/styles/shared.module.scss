@@ -44,6 +44,17 @@ $base-easing: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
 @import "./reset.module.scss";
 
+//mixins
+@mixin rect($a) {
+  width: $a;
+  height: $a;
+}
+
+@mixin circle($a) {
+  @include rect($a);
+  border-radius: 50%;
+}
+
 .Container {
   max-width: 60rem;
   margin: 3rem auto 0;

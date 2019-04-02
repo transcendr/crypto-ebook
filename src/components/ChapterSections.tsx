@@ -1,10 +1,19 @@
 import * as React from "react"
+import {
+  animateScroll as scroll,
+  Element,
+  Events,
+  Link,
+  scroller,
+  scrollSpy
+} from "react-scroll"
 import * as sidebarStyles from "../styles/ChapterNavSidebar.module.scss"
 import * as styles from "../styles/ChapterSections.module.scss"
 
 interface SectionType {
   id: string
   sectionTitle: string
+  sectionSlug: string
 }
 
 interface ChapterSectionsProps {
@@ -12,6 +21,31 @@ interface ChapterSectionsProps {
 }
 
 class ChapterSections extends React.Component<ChapterSectionsProps, {}> {
+  public componentDidMount() {
+    Events.scrollEvent.register("begin", (to: any, element: any) => {
+      console.log("begin", { to, element })
+    })
+
+    Events.scrollEvent.register("end", (to: any, element: any) => {
+      console.log("end", { to, element })
+    })
+
+    scrollSpy.update()
+  }
+
+  public componentWillUnmount() {
+    Events.scrollEvent.remove("begin")
+    Events.scrollEvent.remove("end")
+  }
+
+  public scrollToTop() {
+    scroll.scrollToTop()
+  }
+
+  public scrollToBottom() {
+    scroll.scrollToBottom()
+  }
+
   public render() {
     const { sections } = this.props
     return (
@@ -28,9 +62,17 @@ class ChapterSections extends React.Component<ChapterSectionsProps, {}> {
                 sidebarStyles.chapter_section
               }`}
             >
-              <button className={styles.chapter_section__btn}>
+              <Link
+                to={section.sectionSlug}
+                activeClass={styles.chapter_section__isActive}
+                spy={true}
+                smooth={true}
+                duration={250}
+                offset={-50}
+                hashSpy={true}
+              >
                 {section.sectionTitle}
-              </button>
+              </Link>
             </li>
           )
         })}

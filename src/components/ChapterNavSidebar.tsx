@@ -1,21 +1,28 @@
 import * as React from "react"
+import { ContentfulChapter } from "../@types"
 import * as chapterStyles from "../styles/Chapter.module.scss"
 import * as styles from "../styles/ChapterNavSidebar.module.scss"
 import ChapterItem from "./ChapterItem"
 import ChapterNavArrows from "./ChapterNavArrows"
 import ChapterSections from "./ChapterSections"
+import CompanyLogo from "./CompanyLogo"
 import ExitButton from "./ExitButton"
 
 interface SectionType {
   id: string
   sectionTitle: string
+  sectionSlug: string
 }
+
 interface ChapterNavSidebarProps {
   context: {
     slug: string
     chapterNumber: string
+    prevChapter: ContentfulChapter
+    nextChapter: ContentfulChapter
   }
   chapter: {
+    chapterSlug: string
     chapterName: string
     chapterCopy: {
       json: any
@@ -41,6 +48,7 @@ class ChapterNavSidebar extends React.Component<
   public render() {
     const { isSingleChapterVisible } = this.state
     const { context, chapter } = this.props
+    const { prevChapter, nextChapter } = context
     return (
       <div
         className={`${styles.sidebar_nav} ${
@@ -52,13 +60,18 @@ class ChapterNavSidebar extends React.Component<
         >
           <ExitButton />
           <div className={styles.sidebar_nav__arrows}>
-            <ChapterNavArrows visible={true} />
-            <ChapterItem
-              _number={context.chapterNumber}
-              name={chapter.chapterName}
+            <ChapterNavArrows
+              visible={true}
+              prevChapter={prevChapter}
+              nextChapter={nextChapter}
             />
-            <ChapterSections sections={chapter.chapterSections} />
           </div>
+          <ChapterItem
+            _number={context.chapterNumber}
+            name={chapter.chapterName}
+          />
+          <ChapterSections sections={chapter.chapterSections} />
+          <CompanyLogo />
         </div>
       </div>
     )
