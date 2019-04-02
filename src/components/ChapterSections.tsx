@@ -13,6 +13,7 @@ import * as styles from "../styles/ChapterSections.module.scss"
 interface SectionType {
   id: string
   sectionTitle: string
+  sectionSlug: string
 }
 
 interface ChapterSectionsProps {
@@ -56,14 +57,13 @@ class ChapterSections extends React.Component<ChapterSectionsProps, {}> {
         {sections.map((section: SectionType) => {
           return (
             <li
-              onClick={this.scrollToBottom}
               key={section.id}
               className={`${styles.chapter_section} ${
                 sidebarStyles.chapter_section
               }`}
             >
               <Link
-                to={section.id}
+                to={section.sectionSlug}
                 activeClass={styles.chapter_section__isActive}
                 spy={true}
                 smooth={true}

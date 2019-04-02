@@ -57,7 +57,7 @@ class ChapterTemplate extends React.Component<ChapterTemplateProps, {}> {
                 {documentToReactComponents(chapter.chapterCopy.json)}
                 {chapter.chapterSections.map((section: any) => {
                   return (
-                    <div id={section.id} key={section.id}>
+                    <div id={section.sectionSlug} key={section.id}>
                       <h2>{section.sectionTitle}</h2>
                       {documentToReactComponents(section.sectionCopy.json)}
                     </div>
@@ -90,6 +90,7 @@ export const pageQuery = graphql`
       chapterSections {
         id
         sectionTitle
+        sectionSlug
         sectionCopy {
           json
         }
