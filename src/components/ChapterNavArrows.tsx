@@ -13,7 +13,7 @@ interface ChapterNavArrowsProps {
 class ChapterNavArrows extends React.Component<ChapterNavArrowsProps, {}> {
   public render() {
     const { prevChapter, nextChapter } = this.props
-    console.log({ prevChapter, nextChapter })
+
     return (
       <div className={styles.arrows}>
         <div className={styles.arrow}>

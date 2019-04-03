@@ -42,7 +42,7 @@ $sidebar-max-width: 420px;
   @media (min-width: $screen-lg-min) {
     margin-left: $sidebar-max-width;
   }
-  margin-bottom: 350px; // required so sidebar nav highlights correctly
+  margin-bottom: 150px; // required so sidebar nav highlights correctly
 }
 
 .chapter {

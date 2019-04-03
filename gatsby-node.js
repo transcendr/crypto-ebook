@@ -39,21 +39,33 @@ exports.createPages = ({ graphql, actions }) => {
         }
 
         const chapters = result.data.allContentfulChapter.edges
-        console.log("\n Found Chapters: " + chapters.length)
-        chapters.forEach((chapter, index) => {
-          console.log("Name: " + chapter.node.chapterName + "\n")
-          console.log("Slug: " + chapter.node.chapterSlug + "\n")
-          console.log("Course: " + chapter.node.course.courseName + "\n")
-        })
+
         chapters.forEach((chapter, index) => {
           const { chapterSlug, course } = chapter.node
-          let chapterNumber = index + 1
-          chapterNumber =
-            chapterNumber < 10 ? `0${chapterNumber}` : `${chapterNumber}`
+
+          // Generate Styled Chapter Numbers
+          const order = index + 1
+          let chapterNumber = order < 10 ? `0${order}` : `${order}`
+          let prevChapterNumber = order - 1
+          prevChapterNumber =
+            prevChapterNumber < 10
+              ? `0${prevChapterNumber}`
+              : `${prevChapterNumber}`
+
+          let nextChapterNumber = order + 1
+          nextChapterNumber =
+            nextChapterNumber < 10
+              ? `0${nextChapterNumber}`
+              : `${nextChapterNumber}`
+
+          // Setup prev and next chapter context objects
           let prevChapter = index > 0 ? chapters[index - 1].node : null
+          if (prevChapter) prevChapter.chapterNumber = prevChapterNumber
           let nextChapter = !!chapters[index + 1]
             ? chapters[index + 1].node
             : null
+          if (nextChapter) nextChapter.chapterNumber = nextChapterNumber
+
           // Generate static pages
           createPage({
             path: `/chapter/${chapterSlug}/`,
