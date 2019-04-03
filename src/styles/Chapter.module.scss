@@ -5,9 +5,7 @@ $sidebar-max-width: 420px;
 
 .page_chapter {
   @media (min-width: $screen-md-min) {
-    & {
-      display: flex;
-    }
+    display: flex;
   }
   &__mobile_nav {
     @media (min-width: $screen-md-min) {
