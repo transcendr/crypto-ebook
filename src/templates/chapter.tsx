@@ -3,6 +3,8 @@ import { graphql } from "gatsby"
 import * as React from "react"
 import Helmet from "react-helmet"
 import { ContentfulChapter } from "../@types"
+import ChapterBottomNav from "../components/ChapterBottomNav"
+import ChapterNavMobile from "../components/ChapterNavMobile"
 import ChapterNavSidebar from "../components/ChapterNavSidebar"
 import * as styles from "../styles/Chapter.module.scss"
 
@@ -30,12 +32,15 @@ interface ChapterTemplateProps {
 class ChapterTemplate extends React.Component<ChapterTemplateProps, {}> {
   public render() {
     const { data, pageContext } = this.props
+    const { prevChapter, nextChapter } = pageContext
     const { contentfulChapter: chapter } = data
     const { name: siteTitle } = data.site.siteMetadata
 
     return (
       <div className={styles.page_chapter}>
         <Helmet title={`${chapter.chapterName} | ${siteTitle}`} />
+
+        <ChapterNavMobile context={pageContext} chapter={chapter} />
 
         <ChapterNavSidebar context={pageContext} chapter={chapter} />
 
@@ -62,6 +67,13 @@ class ChapterTemplate extends React.Component<ChapterTemplateProps, {}> {
                 })}
               </div>
             </div>
+          </div>
+
+          <div className="chapter__bottom_nav">
+            <ChapterBottomNav
+              prevChapter={prevChapter}
+              nextChapter={nextChapter}
+            />
           </div>
         </article>
       </div>

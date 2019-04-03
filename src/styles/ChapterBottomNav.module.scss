@@ -1,0 +1,107 @@
+@import "./shared.module.scss";
+
+$root: chapter_navigation;
+
+.#{$root} {
+  display: flex;
+  &__block {
+    width: 50%;
+    padding-top: $base-sizing;
+    padding-bottom: (1.5 * $base-sizing);
+    @media (min-width: $screen-sm-min) {
+      padding-top: (0.5 * $base-sizing);
+      padding-bottom: 6.38rem;
+    }
+    &_right {
+      padding-left: (0.5 * $base-sizing);
+      padding-right: (0.5 * $base-sizing);
+      @media (min-width: $screen-sm-min) {
+        padding-left: $base-sizing;
+        padding-right: (1.5 * $base-sizing);
+      }
+    }
+    &_left {
+      padding-left: (0.5 * $base-sizing);
+      padding-right: (0.5 * $base-sizing);
+      text-align: right;
+      @media (min-width: $screen-sm-min) {
+        padding-left: (1.5 * $base-sizing);
+        padding-right: $base-sizing;
+      }
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__direction,
+  &__chapter_number {
+    font-size: $fs-1;
+    font-weight: $fw-bold;
+    color: $c-grey-light;
+  }
+  &__direction {
+    text-transform: uppercase;
+  }
+  &__title {
+    position: relative;
+    margin: 5px 0;
+    font-size: $fs-2;
+    font-weight: $fw-bold;
+    color: $c-black;
+    @media (min-width: $screen-sm-min) {
+      .#{$root}__block_left & {
+        padding-left: 4rem;
+      }
+      .#{$root}__block_right & {
+        padding-right: 4rem;
+      }
+    }
+    @media (min-width: $screen-md-min) {
+      font-size: $fs-6;
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    flex-direction: column;
+    .#{$root}__arrow {
+      background-color: $c-white;
+      color: $c-black;
+      transition: background-color 0.5s ease, color 0.5s ease;
+    }
+    &:hover {
+      text-decoration: none;
+      .#{$root}__arrow {
+        background-color: $c-primary;
+        color: $c-white;
+      }
+    }
+  }
+
+  &__arrow {
+    display: none;
+    @media (min-width: $screen-sm-min) {
+      @include circle(2.33rem);
+      position: absolute;
+      top: 0;
+      right: 1rem;
+      bottom: 0;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &_left {
+      left: 1rem;
+      right: auto;
+    }
+  }
+  &__arrow_left svg {
+    transform: rotate(-180deg);
+  }
+}
