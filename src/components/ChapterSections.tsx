@@ -51,6 +51,9 @@ class ChapterSections extends React.Component<ChapterSectionsProps, {}> {
       >
         {sections &&
           sections.map((section: SectionType) => {
+            if (!section.sectionTitle) {
+              return null
+            }
             return (
               <li
                 key={section.id}

@@ -59,6 +59,11 @@ class ChapterNavSidebar extends React.Component<
           className={styles.sidebar_nav__content + ` ${isSingleChapterVisible}`}
         >
           <ExitButton />
+
+          <ChapterItem
+            _number={context.chapterNumber}
+            name={chapter.chapterName}
+          />
           <div className={styles.sidebar_nav__arrows}>
             <ChapterNavArrows
               visible={true}
@@ -66,10 +71,6 @@ class ChapterNavSidebar extends React.Component<
               nextChapter={nextChapter}
             />
           </div>
-          <ChapterItem
-            _number={context.chapterNumber}
-            name={chapter.chapterName}
-          />
           <ChapterSections sections={chapter.chapterSections} />
           <CompanyLogo />
         </div>
