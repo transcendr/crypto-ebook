@@ -1,0 +1,38 @@
+@import "./shared.module.scss";
+
+.topics_component {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  /* Additionals */
+  border-style: solid;
+  border-width: 1px;
+  border-color: $c-grey-light;
+  box-shadow: 3px 3px 4px 0 $c-grey-light;
+
+  &__column {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+
+    &_left {
+      padding: 30px;
+      background-color: #389cff;
+    }
+
+    &_right {
+      padding: 15px 30px 30px;
+    }
+  }
+}
