@@ -30,7 +30,7 @@ class TopicsList extends React.Component<TopicsListProps, {}> {
           <h2 className={sx.topics_component__chapter_number}>
             {chapterNumber}
           </h2>
-          <h3 class={sx.topics_component__chapter_name}>{chapterName}</h3>
+          <h3 className={sx.topics_component__chapter_name}>{chapterName}</h3>
         </div>
         <div
           className={`${sx.topics_component__column} ${

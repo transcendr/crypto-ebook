@@ -25,6 +25,30 @@ export interface TopicsListSectionType {
   }
 }
 
+interface CardImage {
+  description: string
+  id: string
+  file: {
+    url: string
+    fileName: string
+    contentType: string
+  }
+}
+
+export interface CardSectionType {
+  id: string
+  cardHeadline: string
+  cardImage: CardImage
+  cardCopy: {
+    json: any
+  }
+}
+
+export interface CardsSectionType {
+  id: string
+  cardItems: CardSectionType[]
+}
+
 export interface PageContextType {
   slug: string
   chapterNumber: string

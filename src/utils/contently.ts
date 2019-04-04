@@ -4,6 +4,8 @@ export const isComponentType = data => {
       return "section"
     case "ContentfulTopicsListComponent":
       return "topics"
+    case "ContentfulCardsComponent":
+      return "cards"
     default:
       return false
   }

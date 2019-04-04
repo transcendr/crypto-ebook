@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import * as React from "react"
 import Helmet from "react-helmet"
 import { ContentfulChapter, PageContextType } from "../@types"
+import Cards from "../components/@CardsComponent"
 import ChapterSectionCopy from "../components/@ChapterSectionCopy"
 import TopicsList from "../components/@TopicsList"
 import ChapterBottomNav from "../components/ChapterBottomNav"
@@ -73,6 +74,15 @@ class ChapterTemplate extends React.Component<ChapterTemplateProps, {}> {
                             section={section}
                           />
                         )
+                      case "cards":
+                        return (
+                          <Cards
+                            key={section.id}
+                            context={pageContext}
+                            chapter={chapter}
+                            section={section}
+                          />
+                        )
                       default:
                         return (
                           <p key={section.id}>
@@ -114,6 +124,14 @@ export const pageQuery = graphql`
         json
       }
       chapterSections {
+        ... on ContentfulChapterSection {
+          id
+          sectionTitle
+          sectionSlug
+          sectionCopy {
+            json
+          }
+        }
         ... on ContentfulTopicsListComponent {
           id
           sectionSlug
@@ -122,12 +140,24 @@ export const pageQuery = graphql`
             json
           }
         }
-        ... on ContentfulChapterSection {
+        ... on ContentfulCardsComponent {
           id
-          sectionTitle
           sectionSlug
-          sectionCopy {
-            json
+          cardItems {
+            id
+            cardHeadline
+            cardImage {
+              description
+              id
+              file {
+                url
+                fileName
+                contentType
+              }
+            }
+            cardCopy {
+              json
+            }
           }
         }
       }
