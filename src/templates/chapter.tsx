@@ -3,10 +3,13 @@ import { graphql } from "gatsby"
 import * as React from "react"
 import Helmet from "react-helmet"
 import { ContentfulChapter } from "../@types"
+import ChapterSectionCopy from "../components/@ChapterSectionCopy"
+import TopicsList from "../components/@TopicsList"
 import ChapterBottomNav from "../components/ChapterBottomNav"
 import ChapterNavMobile from "../components/ChapterNavMobile"
 import ChapterNavSidebar from "../components/ChapterNavSidebar"
 import * as styles from "../styles/Chapter.module.scss"
+import { isComponentType } from "../utils/contently"
 
 interface ChapterTemplateProps {
   data: {
@@ -36,6 +39,8 @@ class ChapterTemplate extends React.Component<ChapterTemplateProps, {}> {
     const { contentfulChapter: chapter } = data
     const { name: siteTitle } = data.site.siteMetadata
 
+    console.log("chapter.sections", chapter.chapterSections)
+
     return (
       <div className={styles.page_chapter}>
         <Helmet title={`${chapter.chapterName} | ${siteTitle}`} />
@@ -57,14 +62,26 @@ class ChapterTemplate extends React.Component<ChapterTemplateProps, {}> {
               <div className={`${styles.content} ${styles.custom}`}>
                 <h1>{chapter.chapterName}</h1>
                 {documentToReactComponents(chapter.chapterCopy.json)}
-                {chapter.chapterSections.map((section: any) => {
-                  return (
-                    <div id={section.sectionSlug} key={section.id}>
-                      <h2>{section.sectionTitle}</h2>
-                      {documentToReactComponents(section.sectionCopy.json)}
-                    </div>
-                  )
-                })}
+                {chapter.chapterSections &&
+                  chapter.chapterSections.map((section: any) => {
+                    switch (isComponentType(section)) {
+                      case "section":
+                        return (
+                          <ChapterSectionCopy
+                            key={section.id}
+                            section={section}
+                          />
+                        )
+                      case "topics":
+                        return <TopicsList key={section.id} section={section} />
+                      default:
+                        return (
+                          <p key={section.id}>
+                            There is no component associated
+                          </p>
+                        )
+                    }
+                  })}
               </div>
             </div>
           </div>
@@ -98,11 +115,21 @@ export const pageQuery = graphql`
         json
       }
       chapterSections {
-        id
-        sectionTitle
-        sectionSlug
-        sectionCopy {
-          json
+        ... on ContentfulTopicsListComponent {
+          id
+          sectionSlug
+          topicsComponentHeadline
+          topicsComponentList {
+            json
+          }
+        }
+        ... on ContentfulChapterSection {
+          id
+          sectionTitle
+          sectionSlug
+          sectionCopy {
+            json
+          }
         }
       }
     }

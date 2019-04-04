@@ -7,3 +7,20 @@ export interface ContentfulChapter {
   }
   chapterSections: any[]
 }
+
+export interface SectionType {
+  id: string
+  sectionTitle: string
+  sectionSlug: string
+  sectionCopy: {
+    json: any
+  }
+}
+
+export interface TopicsListSectionType {
+  id: string
+  topicsComponentHeadline: string
+  topicsComponentList: {
+    json: any
+  }
+}

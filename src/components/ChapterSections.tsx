@@ -7,14 +7,9 @@ import {
   scroller,
   scrollSpy
 } from "react-scroll"
+import { SectionType } from "../@types"
 import * as sidebarStyles from "../styles/ChapterNavSidebar.module.scss"
 import * as styles from "../styles/ChapterSections.module.scss"
-
-interface SectionType {
-  id: string
-  sectionTitle: string
-  sectionSlug: string
-}
 
 interface ChapterSectionsProps {
   sections: SectionType[]
@@ -54,28 +49,29 @@ class ChapterSections extends React.Component<ChapterSectionsProps, {}> {
           sidebarStyles.chapter_sections
         }`}
       >
-        {sections.map((section: SectionType) => {
-          return (
-            <li
-              key={section.id}
-              className={`${styles.chapter_section} ${
-                sidebarStyles.chapter_section
-              }`}
-            >
-              <Link
-                to={section.sectionSlug}
-                activeClass={styles.chapter_section__isActive}
-                spy={true}
-                smooth={true}
-                duration={250}
-                offset={-50}
-                hashSpy={true}
+        {sections &&
+          sections.map((section: SectionType) => {
+            return (
+              <li
+                key={section.id}
+                className={`${styles.chapter_section} ${
+                  sidebarStyles.chapter_section
+                }`}
               >
-                {section.sectionTitle}
-              </Link>
-            </li>
-          )
-        })}
+                <Link
+                  to={section.sectionSlug}
+                  activeClass={styles.chapter_section__isActive}
+                  spy={true}
+                  smooth={true}
+                  duration={250}
+                  offset={-50}
+                  hashSpy={true}
+                >
+                  {section.sectionTitle}
+                </Link>
+              </li>
+            )
+          })}
       </ul>
     )
   }

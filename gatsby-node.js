@@ -19,10 +19,7 @@ exports.createPages = ({ graphql, actions }) => {
                     json
                   }
                   chapterSections {
-                    sectionTitle
-                    sectionCopy {
-                      json
-                    }
+                    __typename
                   }
                   course {
                     courseName
