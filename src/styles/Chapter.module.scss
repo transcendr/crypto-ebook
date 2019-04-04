@@ -77,6 +77,10 @@ $sidebar-max-width: 420px;
 .content.custom {
   margin-top: $base-sizing;
 
+  b {
+    font-weight: bold;
+  }
+
   p {
     margin: $base-small-sizing 0;
     font-size: $fs-text-base;

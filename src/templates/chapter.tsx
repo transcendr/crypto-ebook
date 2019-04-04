@@ -2,7 +2,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { graphql } from "gatsby"
 import * as React from "react"
 import Helmet from "react-helmet"
-import { ContentfulChapter } from "../@types"
+import { ContentfulChapter, PageContextType } from "../@types"
 import ChapterSectionCopy from "../components/@ChapterSectionCopy"
 import TopicsList from "../components/@TopicsList"
 import ChapterBottomNav from "../components/ChapterBottomNav"
@@ -21,15 +21,7 @@ interface ChapterTemplateProps {
     }
     contentfulChapter: ContentfulChapter
   }
-  pageContext: {
-    slug: string
-    chapterNumber: string
-    course: {
-      courseName: string
-    }
-    prevChapter: ContentfulChapter
-    nextChapter: ContentfulChapter
-  }
+  pageContext: PageContextType
 }
 
 class ChapterTemplate extends React.Component<ChapterTemplateProps, {}> {
@@ -60,7 +52,7 @@ class ChapterTemplate extends React.Component<ChapterTemplateProps, {}> {
 
             <div className={styles.chapter__content}>
               <div className={`${styles.content} ${styles.custom}`}>
-                <h1>{chapter.chapterName}</h1>
+                <h1 style={{ display: "none" }}>{chapter.chapterName}</h1>
                 {documentToReactComponents(chapter.chapterCopy.json)}
                 {chapter.chapterSections &&
                   chapter.chapterSections.map((section: any) => {
@@ -73,7 +65,14 @@ class ChapterTemplate extends React.Component<ChapterTemplateProps, {}> {
                           />
                         )
                       case "topics":
-                        return <TopicsList key={section.id} section={section} />
+                        return (
+                          <TopicsList
+                            key={section.id}
+                            context={pageContext}
+                            chapter={chapter}
+                            section={section}
+                          />
+                        )
                       default:
                         return (
                           <p key={section.id}>

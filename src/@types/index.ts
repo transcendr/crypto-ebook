@@ -24,3 +24,13 @@ export interface TopicsListSectionType {
     json: any
   }
 }
+
+export interface PageContextType {
+  slug: string
+  chapterNumber: string
+  course: {
+    courseName: string
+  }
+  prevChapter: ContentfulChapter
+  nextChapter: ContentfulChapter
+}
