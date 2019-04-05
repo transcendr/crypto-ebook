@@ -3,6 +3,9 @@ and content management token (API Keys menu)
   
 {
   "spaceId": "xxxxx",
-  "managementToken": "XXXXX-xxxx"
+  "managementToken": "XXXXX-xxxx",
+  "exportDir": "./",
+  "contentFile": "exported",
+  "saveFile": true
 }
   
