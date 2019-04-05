@@ -37,10 +37,11 @@ $root: cards_component;
   }
 
   &__card_headline {
-    margin-top: 10px !important;
-    margin-bottom: 10px !important;
-    font-size: 1rem !important;
-    line-height: 1.5rem !important;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1.5rem;
     text-align: center;
   }
 
@@ -51,10 +52,10 @@ $root: cards_component;
   }
 
   &__card_copy > p {
-    font-size: 0.9rem !important;
-    line-height: 1.2rem !important;
+    font-size: 0.9rem;
+    line-height: 1.2rem;
     text-align: center;
-    margin-top: 0 !important;
-    margin-bottom: 10px !important;
+    margin-top: 0;
+    margin-bottom: 10px;
   }
 }

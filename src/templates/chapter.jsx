@@ -38,46 +38,45 @@ class ChapterTemplate extends React.Component {
             <div className={styles.chapter__content}>
               <div className={`${styles.content} ${styles.custom}`}>
                 <h1 style={{ display: "block" }}>{chapter.chapterName}</h1>
+              </div>
+              {documentToReactComponents(chapter.chapterCopy.json)}
 
-                {documentToReactComponents(chapter.chapterCopy.json)}
-
-                {chapter.chapterSections &&
-                  chapter.chapterSections.map(section => {
-                    switch (isComponentType(section)) {
-                      case "section":
-                        return (
+              {chapter.chapterSections &&
+                chapter.chapterSections.map(section => {
+                  switch (isComponentType(section)) {
+                    case "section":
+                      return (
+                        <div className={`${styles.content} ${styles.custom}`}>
                           <ChapterSectionCopy
                             key={section.id}
                             section={section}
                           />
-                        )
-                      case "topics":
-                        return (
-                          <TopicsList
-                            key={section.id}
-                            context={pageContext}
-                            chapter={chapter}
-                            section={section}
-                          />
-                        )
-                      case "cards":
-                        return (
-                          <Cards
-                            key={section.id}
-                            context={pageContext}
-                            chapter={chapter}
-                            section={section}
-                          />
-                        )
-                      default:
-                        return (
-                          <p key={section.id}>
-                            There is no component associated
-                          </p>
-                        )
-                    }
-                  })}
-              </div>
+                        </div>
+                      )
+                    case "topics":
+                      return (
+                        <TopicsList
+                          key={section.id}
+                          context={pageContext}
+                          chapter={chapter}
+                          section={section}
+                        />
+                      )
+                    case "cards":
+                      return (
+                        <Cards
+                          key={section.id}
+                          context={pageContext}
+                          chapter={chapter}
+                          section={section}
+                        />
+                      )
+                    default:
+                      return (
+                        <p key={section.id}>There is no component associated</p>
+                      )
+                  }
+                })}
             </div>
           </div>
 
