@@ -26,9 +26,9 @@ module.exports = {
     tagline: `Get to Know Crypto`
   },
   plugins: [
-    `gatsby-plugin-sass`,
     `gatsby-plugin-typescript`,
     `gatsby-plugin-tslint`,
+    `gatsby-plugin-sass`,
     {
       resolve: "gatsby-source-contentful",
       options: contentfulConfig

@@ -5,7 +5,7 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
   return new Promise((resolve, reject) => {
-    const chapterTemplate = path.resolve("./src/templates/chapter.tsx")
+    const chapterTemplate = path.resolve("./src/templates/chapter.jsx")
     resolve(
       graphql(
         `
