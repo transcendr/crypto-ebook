@@ -38,8 +38,8 @@ class ChapterTemplate extends React.Component {
             <div className={styles.chapter__content}>
               <div className={`${styles.content} ${styles.custom}`}>
                 <h1 style={{ display: "block" }}>{chapter.chapterName}</h1>
+                {documentToReactComponents(chapter.chapterCopy.json)}
               </div>
-              {documentToReactComponents(chapter.chapterCopy.json)}
 
               {chapter.chapterSections &&
                 chapter.chapterSections.map(section => {
