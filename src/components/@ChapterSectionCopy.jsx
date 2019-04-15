@@ -7,7 +7,8 @@ class ChapterSectionCopy extends React.Component {
     return (
       <div id={section.sectionSlug} key={section.id}>
         <h2>{section.sectionTitle}</h2>
-        {documentToReactComponents(section.sectionCopy.json)}
+        {section.sectionCopy &&
+          documentToReactComponents(section.sectionCopy.json)}
       </div>
     )
   }

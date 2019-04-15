@@ -36,7 +36,7 @@ class CardItem extends React.Component {
             alt={cardImage.description}
           />
           <div className={sx.cards_component__card_copy} style={bodyStyles}>
-            {documentToReactComponents(cardCopy.json)}
+            {cardCopy.json && documentToReactComponents(cardCopy.json)}
           </div>
         </div>
       </div>

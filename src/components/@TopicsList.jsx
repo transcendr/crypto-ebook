@@ -46,7 +46,8 @@ class TopicsList extends React.Component {
         >
           <h2 className={sx.topics_component__headline}>{headline}</h2>
           <div className={`${sx.topics_component__list_copy}`}>
-            {documentToReactComponents(section.topicsComponentList.json)}
+            {section.topicsComponentList &&
+              documentToReactComponents(section.topicsComponentList.json)}
           </div>
         </div>
       </div>
