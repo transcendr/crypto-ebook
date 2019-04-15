@@ -124,6 +124,12 @@ export const pageQuery = graphql`
           topicsComponentList {
             json
           }
+          backgroundColor {
+            code
+          }
+          borderColor {
+            code
+          }
         }
         ... on ContentfulCardsComponent {
           id
@@ -142,6 +148,18 @@ export const pageQuery = graphql`
             }
             cardCopy {
               json
+            }
+            backgroundColor {
+              code
+            }
+            borderColor {
+              code
+            }
+            titleColor {
+              code
+            }
+            bodyColor {
+              code
             }
           }
         }

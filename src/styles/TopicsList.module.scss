@@ -2,6 +2,7 @@
 
 $root: topics_component;
 $screen-transition-max: 1024px;
+$screen-transition-min: 1025px;
 
 .#{$root} {
   display: -webkit-box;
@@ -41,7 +42,7 @@ $screen-transition-max: 1024px;
       padding: 30px;
       background-color: #389cff;
       @media (max-width: $screen-transition-max) {
-        padding-top: 0px;
+        padding: 0 10px 10px !important;
       }
     }
 
@@ -50,9 +51,22 @@ $screen-transition-max: 1024px;
     }
   }
 
+  &__dt_chapter_info {
+    @media (max-width: $screen-transition-max) {
+      display: none;
+    }
+  }
+
+  &__mobi_chapter_info {
+    @media (min-width: $screen-transition-min) {
+      display: none;
+    }
+    text-align: center;
+  }
+
   &__chapter_number {
     color: #fff;
-    font-size: 4rem;
+    font-size: 3.3rem;
     line-height: 1em;
     margin: 20px 0 10px 0;
     font-weight: bold;
@@ -64,7 +78,7 @@ $screen-transition-max: 1024px;
   &__chapter_name {
     margin: 20px 0 10px 0;
     color: #fff;
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     line-height: 1em;
     font-weight: 600;
     @media (max-width: $screen-transition-max) {
@@ -93,8 +107,8 @@ $screen-transition-max: 1024px;
     background-image: url("/assets/single-berry-color.svg");
     background-repeat: no-repeat;
     background-position: left top;
-    background-size: 20px;
-    padding-left: 30px;
+    background-size: 14px;
+    padding-left: 25px;
     &::before {
       background-color: transparent;
     }
