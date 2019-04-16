@@ -38,7 +38,7 @@ class ChapterTemplate extends React.Component {
             <div className={styles.chapter__content}>
               <div className={`${styles.content} ${styles.custom}`}>
                 {chapter.hideChapterTitle !== true && (
-                  <h1 style={{ display: "block" }}>{chapter.chapterName}</h1>
+                  <h1>{chapter.chapterName}</h1>
                 )}
                 {chapter.chapterCopy &&
                   documentToReactComponents(chapter.chapterCopy.json)}

@@ -48,8 +48,8 @@ $sidebar-max-width: 420px;
   padding-left: 2.5rem;
   padding-right: 2.5rem;
   &__book_title {
-    margin-bottom: $base-sizing;
-    font-size: $fs-1;
+    margin-bottom: 0.5rem;
+    font-size: 0.65rem;
     font-weight: $fw-semibold;
     line-height: $base-sizing;
     text-align: center;
@@ -57,7 +57,7 @@ $sidebar-max-width: 420px;
     color: $c-grey-light;
   }
   &__number {
-    font-size: $fs-5;
+    font-size: 1rem;
     font-weight: $fw-bold;
     text-align: center;
     color: $c-primary;
@@ -68,7 +68,7 @@ $sidebar-max-width: 420px;
 }
 
 .content.custom {
-  margin-top: $base-sizing;
+  margin-top: 4rem;
   padding-left: 1rem;
   padding-right: 1rem;
 
