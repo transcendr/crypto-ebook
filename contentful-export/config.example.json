@@ -1,0 +1,11 @@
+Rename to `config.json` and replace the details below with Space ID
+and content management token (API Keys menu)
+  
+{
+  "spaceId": "xxxxx",
+  "managementToken": "XXXXX-xxxx",
+  "exportDir": "./",
+  "contentFile": "exported",
+  "saveFile": true
+}
+  

@@ -1,0 +1,8 @@
+Rename to `import-config.json` and replace the details below with Space ID
+and content management token (API Keys menu)
+
+{
+  "spaceId": "xxx",
+  "managementToken": "XXXXX-xxxx",
+  "contentFile": "exported.json"
+}

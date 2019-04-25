@@ -5,45 +5,25 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
   return new Promise((resolve, reject) => {
-    const chapterQL = `chapterName
-    chapterSlug
-    chapterCopy {
-      json
-    }
-    chapterSections {
-      __typename
-    }
-    course {
-      courseName
-      courseSlug
-      category {
-        id
-      }
-    }`
-    const chapterTemplate = path.resolve("./src/templates/chapter.jsx")
+    const chapterTemplate = path.resolve("./src/templates/chapter.tsx")
     resolve(
       graphql(
         `
           {
-            allContentfulCourse {
-              edges {
-                node {
-                  courseName
-                  courseSlug
-                  category {
-                    id
-                  }
-                  chapters {
-                    ${chapterQL}
-                  }
-                }
-              }
-            }
-
             allContentfulChapter {
               edges {
                 node {
-                  ${chapterQL}
+                  chapterName
+                  chapterSlug
+                  chapterCopy {
+                    json
+                  }
+                  chapterSections {
+                    id
+                  }
+                  course {
+                    courseName
+                  }
                 }
               }
             }
@@ -55,12 +35,10 @@ exports.createPages = ({ graphql, actions }) => {
           reject(result.errors)
         }
 
-        const courses = result.data.allContentfulCourse.edges
-        const course = courses[0].node
-        const chapters = course.chapters
+        const chapters = result.data.allContentfulChapter.edges
 
         chapters.forEach((chapter, index) => {
-          const { chapterSlug } = chapter
+          const { chapterSlug, course } = chapter.node
 
           // Generate Styled Chapter Numbers
           const order = index + 1
@@ -78,9 +56,11 @@ exports.createPages = ({ graphql, actions }) => {
               : `${nextChapterNumber}`
 
           // Setup prev and next chapter context objects
-          let prevChapter = index > 0 ? chapters[index - 1] : null
+          let prevChapter = index > 0 ? chapters[index - 1].node : null
           if (prevChapter) prevChapter.chapterNumber = prevChapterNumber
-          let nextChapter = !!chapters[index + 1] ? chapters[index + 1] : null
+          let nextChapter = !!chapters[index + 1]
+            ? chapters[index + 1].node
+            : null
           if (nextChapter) nextChapter.chapterNumber = nextChapterNumber
 
           // Generate static pages

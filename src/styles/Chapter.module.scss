@@ -1,13 +1,11 @@
 @import "./shared.module.scss";
 
-$sidebar-width: 25vw;
+$sidebar-width: 20vw;
 $sidebar-max-width: 420px;
 
 .page_chapter {
   @media (min-width: $screen-md-min) {
-    & {
-      display: flex;
-    }
+    display: flex;
   }
   &__mobile_nav {
     @media (min-width: $screen-md-min) {
@@ -16,7 +14,7 @@ $sidebar-max-width: 420px;
   }
   &__sidebar_nav {
     display: none;
-    width: 25vw;
+    width: $sidebar-width;
     border-right: 1px solid $c-grey-very-light;
   }
   &__sidebar_nav {
@@ -26,7 +24,7 @@ $sidebar-max-width: 420px;
   }
   &__sidebar_nav {
     @media (min-width: $screen-lg-min) {
-      max-width: 420px;
+      max-width: 320px;
     }
   }
 }
@@ -34,31 +32,24 @@ $sidebar-max-width: 420px;
 .chapter_container {
   margin-top: 60px;
   @media (min-width: $screen-md-min) {
-    max-width: 970px;
+    max-width: 1170px;
     flex: 1;
     margin-top: 0;
     margin-left: $sidebar-width;
   }
   @media (min-width: $screen-lg-min) {
-    margin-left: $sidebar-max-width;
+    margin-left: $sidebar-width;
   }
-  margin-bottom: 350px; // required so sidebar nav highlights correctly
+  margin-bottom: 150px; // required so sidebar nav highlights correctly
 }
 
 .chapter {
   padding: ($base-sizing * 2) $base-sizing;
-  @media (min-width: $screen-sm-min) {
-    padding-right: ($base-sizing * 2);
-    padding-left: ($base-sizing * 2);
-  }
-  @media (min-width: $screen-md-min) {
-    padding-right: ($base-sizing * 3);
-    padding-bottom: ($base-sizing * 7);
-    padding-left: ($base-sizing * 3);
-  }
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
   &__book_title {
-    margin-bottom: $base-sizing;
-    font-size: $fs-1;
+    margin-bottom: 0.5rem;
+    font-size: 0.65rem;
     font-weight: $fw-semibold;
     line-height: $base-sizing;
     text-align: center;
@@ -66,7 +57,7 @@ $sidebar-max-width: 420px;
     color: $c-grey-light;
   }
   &__number {
-    font-size: $fs-5;
+    font-size: 1rem;
     font-weight: $fw-bold;
     text-align: center;
     color: $c-primary;
@@ -77,7 +68,13 @@ $sidebar-max-width: 420px;
 }
 
 .content.custom {
-  margin-top: $base-sizing;
+  margin-top: 4rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  b {
+    font-weight: bold;
+  }
 
   p {
     margin: $base-small-sizing 0;

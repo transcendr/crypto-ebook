@@ -1,0 +1,4301 @@
+{
+  "contentTypes": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "ygudoxdn7esm"
+          }
+        },
+        "id": "category",
+        "type": "ContentType",
+        "createdAt": "2019-03-30T10:46:30.256Z",
+        "updatedAt": "2019-03-30T10:46:30.572Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2019-03-30T10:46:30.572Z",
+        "firstPublishedAt": "2019-03-30T10:46:30.572Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        }
+      },
+      "displayField": "name",
+      "name": "Category",
+      "description": "ebook / course category",
+      "fields": [
+        {
+          "id": "name",
+          "name": "Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "categorySlug",
+          "name": "Category Slug",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "ygudoxdn7esm"
+          }
+        },
+        "id": "course",
+        "type": "ContentType",
+        "createdAt": "2019-03-30T10:49:23.971Z",
+        "updatedAt": "2019-03-30T10:50:44.790Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2019-03-30T10:50:44.790Z",
+        "firstPublishedAt": "2019-03-30T10:49:24.297Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        }
+      },
+      "displayField": "courseName",
+      "name": "Course",
+      "description": "The course or eBook",
+      "fields": [
+        {
+          "id": "courseName",
+          "name": "Course Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "courseSlug",
+          "name": "Course Slug",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "category",
+          "name": "Category",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+            ],
+            "linkType": "Entry"
+          }
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "ygudoxdn7esm"
+          }
+        },
+        "id": "chapter",
+        "type": "ContentType",
+        "createdAt": "2019-03-30T10:57:14.202Z",
+        "updatedAt": "2019-04-04T19:47:52.679Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 15,
+        "publishedAt": "2019-04-04T19:47:52.679Z",
+        "firstPublishedAt": "2019-03-30T10:57:14.695Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "publishedCounter": 8,
+        "version": 16,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        }
+      },
+      "displayField": "chapterName",
+      "name": "Chapter",
+      "description": "A chapter within a specific course",
+      "fields": [
+        {
+          "id": "chapterName",
+          "name": "Chapter Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "chapterSlug",
+          "name": "Chapter Slug",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "chapterSections",
+          "name": "Chapter Sections",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "cardsComponent",
+                  "chapterSection",
+                  "topicsListComponent"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "chapterCopy",
+          "name": "Chapter Copy",
+          "type": "RichText",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "nodes": {
+                "embedded-entry-block": [
+                  {
+                    "linkContentType": [
+                      "chapterSection"
+                    ]
+                  }
+                ],
+                "embedded-entry-inline": [
+                  {
+                    "linkContentType": [
+                      "chapterSection"
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "course",
+          "name": "Course",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "linkContentType": [
+                "course"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "ygudoxdn7esm"
+          }
+        },
+        "id": "chapterSection",
+        "type": "ContentType",
+        "createdAt": "2019-03-30T11:06:23.694Z",
+        "updatedAt": "2019-04-04T09:10:43.235Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 17,
+        "publishedAt": "2019-04-04T09:10:43.235Z",
+        "firstPublishedAt": "2019-03-30T11:06:24.158Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "publishedCounter": 9,
+        "version": 18,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        }
+      },
+      "displayField": "sectionTitle",
+      "name": "Chapter Section",
+      "description": "A section within a specific chapter",
+      "fields": [
+        {
+          "id": "sectionTitle",
+          "name": "Section Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "sectionSlug",
+          "name": "Section Slug",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "sectionCopy",
+          "name": "Section Copy",
+          "type": "RichText",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "nodes": {
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "ygudoxdn7esm"
+          }
+        },
+        "id": "topicsListComponent",
+        "type": "ContentType",
+        "createdAt": "2019-04-04T13:31:12.438Z",
+        "updatedAt": "2019-04-04T13:39:30.061Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2019-04-04T13:39:30.061Z",
+        "firstPublishedAt": "2019-04-04T13:32:28.816Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        }
+      },
+      "displayField": "componentName",
+      "name": "Topics List Component",
+      "description": "2 column component with Chapter Number and Name on the left and a headline with a list of topics on the right.",
+      "fields": [
+        {
+          "id": "componentName",
+          "name": "Component Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "sectionSlug",
+          "name": "Section Slug",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "topicsComponentHeadline",
+          "name": "Topics Component Headline",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "topicsComponentList",
+          "name": "Topics Component List",
+          "type": "RichText",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "nodes": {
+              }
+            },
+            {
+              "enabledNodeTypes": [
+                "heading-1",
+                "heading-2",
+                "heading-3",
+                "heading-4",
+                "heading-5",
+                "heading-6",
+                "ordered-list",
+                "unordered-list",
+                "hr",
+                "blockquote",
+                "embedded-asset-block",
+                "hyperlink",
+                "asset-hyperlink"
+              ],
+              "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, asset, link to Url, and link to asset nodes are allowed"
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "ygudoxdn7esm"
+          }
+        },
+        "id": "cardsComponent",
+        "type": "ContentType",
+        "createdAt": "2019-04-04T19:18:41.662Z",
+        "updatedAt": "2019-04-04T19:25:44.581Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2019-04-04T19:25:44.581Z",
+        "firstPublishedAt": "2019-04-04T19:18:41.967Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        }
+      },
+      "displayField": "componentName",
+      "name": "Cards Component",
+      "description": "Responsive, equal height, 3 column cards",
+      "fields": [
+        {
+          "id": "componentName",
+          "name": "Component Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "sectionSlug",
+          "name": "Section Slug",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "cardItems",
+          "name": "Card Items",
+          "type": "Array",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "card"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "ygudoxdn7esm"
+          }
+        },
+        "id": "card",
+        "type": "ContentType",
+        "createdAt": "2019-04-04T19:21:47.217Z",
+        "updatedAt": "2019-04-04T19:25:11.687Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2019-04-04T19:25:11.687Z",
+        "firstPublishedAt": "2019-04-04T19:21:47.546Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        }
+      },
+      "displayField": "cardName",
+      "name": "Card",
+      "description": "Entries for the Cards Component",
+      "fields": [
+        {
+          "id": "cardName",
+          "name": "Card Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "cardHeadline",
+          "name": "Card Headline",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "cardImage",
+          "name": "Card Image",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "linkMimetypeGroup": [
+                "image"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "cardCopy",
+          "name": "Card Copy",
+          "type": "RichText",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "nodes": {
+              }
+            },
+            {
+              "enabledNodeTypes": [
+                "heading-1",
+                "heading-2",
+                "heading-3",
+                "heading-4",
+                "heading-5",
+                "heading-6",
+                "ordered-list",
+                "unordered-list",
+                "hr",
+                "blockquote",
+                "hyperlink"
+              ],
+              "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, and link to Url nodes are allowed"
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    }
+  ],
+  "editorInterfaces": [
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "ygudoxdn7esm",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2019-03-30T10:46:30.814Z",
+        "createdBy": {
+          "sys": {
+            "id": "5VvU5LZNGXObhMfonOX4Dy",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2019-03-30T10:46:31.325Z",
+        "updatedBy": {
+          "sys": {
+            "id": "5VvU5LZNGXObhMfonOX4Dy",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "category",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "name",
+          "settings": {
+            "helpText": "Enter the category display name as you would want it displayed to the end user (ie, Advanced Courses)"
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "categorySlug",
+          "settings": {
+            "helpText": "Enter a matching slug identifier for this category"
+          },
+          "widgetId": "slugEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "ygudoxdn7esm",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 4,
+        "createdAt": "2019-03-30T10:49:24.456Z",
+        "createdBy": {
+          "sys": {
+            "id": "5VvU5LZNGXObhMfonOX4Dy",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2019-03-30T10:50:45.353Z",
+        "updatedBy": {
+          "sys": {
+            "id": "5VvU5LZNGXObhMfonOX4Dy",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "course",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "courseName",
+          "settings": {
+            "helpText": "Enter the name of the course or eBook as it would be displayed to the end user."
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "courseSlug",
+          "settings": {
+            "helpText": "Enter a matching course slug identifier (must be unique)"
+          },
+          "widgetId": "slugEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "category",
+          "settings": {
+            "helpText": "Choose a category for this course",
+            "bulkEditing": false
+          },
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "ygudoxdn7esm",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 16,
+        "createdAt": "2019-03-30T10:57:14.838Z",
+        "createdBy": {
+          "sys": {
+            "id": "5VvU5LZNGXObhMfonOX4Dy",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2019-04-04T19:47:53.214Z",
+        "updatedBy": {
+          "sys": {
+            "id": "5VvU5LZNGXObhMfonOX4Dy",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "chapter",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "chapterName",
+          "settings": {
+            "helpText": "Enter the name of the chapter as it would appear to the end user, as a title, in navigation, etc."
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "chapterSlug",
+          "settings": {
+            "helpText": "A matching chapter slug identifier (must be unique)"
+          },
+          "widgetId": "slugEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "chapterSections",
+          "settings": {
+            "helpText": "Choose the sections of this chapter and arrange them in order.",
+            "bulkEditing": false
+          },
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "chapterCopy",
+          "settings": {
+            "helpText": "Chapter copy text"
+          },
+          "widgetId": "richTextEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "course",
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "ygudoxdn7esm",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 18,
+        "createdAt": "2019-03-30T11:06:24.368Z",
+        "createdBy": {
+          "sys": {
+            "id": "5VvU5LZNGXObhMfonOX4Dy",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2019-04-04T09:10:44.015Z",
+        "updatedBy": {
+          "sys": {
+            "id": "5VvU5LZNGXObhMfonOX4Dy",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "chapterSection",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "sectionTitle",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "sectionSlug",
+          "settings": {
+            "helpText": "Enter a unique identifier that will be used as a hash for scrolling and direct linking to this section"
+          },
+          "widgetId": "slugEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "sectionCopy",
+          "settings": {
+            "helpText": "Basically formatted chapter section copy text"
+          },
+          "widgetId": "richTextEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "ygudoxdn7esm",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 6,
+        "createdAt": "2019-04-04T13:32:28.943Z",
+        "createdBy": {
+          "sys": {
+            "id": "5VvU5LZNGXObhMfonOX4Dy",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2019-04-04T13:39:30.718Z",
+        "updatedBy": {
+          "sys": {
+            "id": "5VvU5LZNGXObhMfonOX4Dy",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "topicsListComponent",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "componentName",
+          "settings": {
+            "helpText": "For internal use only, in order to recognize this component in the Contently UI list.  No one will ever see this."
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "sectionSlug",
+          "settings": {
+            "helpText": "A unique identifier slug that may be used for navigation, and could possibly be visible to end-user in the browser address bar."
+          },
+          "widgetId": "slugEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "topicsComponentHeadline",
+          "settings": {
+            "helpText": "The headline just above the topics list in the right column.  Example: Topics In This Section"
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "topicsComponentList",
+          "settings": {
+            "helpText": "Enter the list of topics in bullet formatting here.  These bullets will then be styled according to the Gatsby site component/layout styles."
+          },
+          "widgetId": "richTextEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "ygudoxdn7esm",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 6,
+        "createdAt": "2019-04-04T19:18:42.143Z",
+        "createdBy": {
+          "sys": {
+            "id": "5VvU5LZNGXObhMfonOX4Dy",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2019-04-04T19:25:45.078Z",
+        "updatedBy": {
+          "sys": {
+            "id": "5VvU5LZNGXObhMfonOX4Dy",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "cardsComponent",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "componentName",
+          "settings": {
+            "helpText": "For internal use only, in order to recognize this component in the Contently UI list.  No one will ever see this."
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "sectionSlug",
+          "settings": {
+            "helpText": "A unique identifier slug that may be used for navigation, and could possibly be visible to end-user in the browser address bar."
+          },
+          "widgetId": "slugEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "cardItems",
+          "settings": {
+            "helpText": "Select the cards that will appear within this component when rendered.",
+            "bulkEditing": false
+          },
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "ygudoxdn7esm",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 6,
+        "createdAt": "2019-04-04T19:21:47.673Z",
+        "createdBy": {
+          "sys": {
+            "id": "5VvU5LZNGXObhMfonOX4Dy",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2019-04-04T19:25:12.219Z",
+        "updatedBy": {
+          "sys": {
+            "id": "5VvU5LZNGXObhMfonOX4Dy",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "card",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "cardName",
+          "settings": {
+            "helpText": "For internal use only, in order to recognize this component in the Contently UI list.  No one will ever see this."
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "cardHeadline",
+          "settings": {
+            "helpText": "Enter text that will appear as the card's headline."
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "cardImage",
+          "settings": {
+            "helpText": "Choose one image to appear in this card."
+          },
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "cardCopy",
+          "settings": {
+            "helpText": "Enter and format text as you would like it to appear within the rendered card."
+          },
+          "widgetId": "richTextEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "ygudoxdn7esm"
+          }
+        },
+        "id": "7JWqgfiGXMvnC5rGk4tOzA",
+        "type": "Entry",
+        "createdAt": "2019-03-30T10:51:02.258Z",
+        "updatedAt": "2019-03-30T10:51:20.720Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2019-03-30T10:51:20.720Z",
+        "firstPublishedAt": "2019-03-30T10:51:20.720Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "category"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Default"
+        },
+        "categorySlug": {
+          "en-US": "default"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "ygudoxdn7esm"
+          }
+        },
+        "id": "a2LDF8Nr0Bc13eVLoqAQU",
+        "type": "Entry",
+        "createdAt": "2019-03-30T10:51:34.660Z",
+        "updatedAt": "2019-03-30T10:52:14.064Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 17,
+        "publishedAt": "2019-03-30T10:52:14.064Z",
+        "firstPublishedAt": "2019-03-30T10:52:14.064Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 18,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "course"
+          }
+        }
+      },
+      "fields": {
+        "courseName": {
+          "en-US": "Getting Started with Crypto"
+        },
+        "courseSlug": {
+          "en-US": "getting-started-with-crypto"
+        },
+        "category": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "7JWqgfiGXMvnC5rGk4tOzA"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "ygudoxdn7esm"
+          }
+        },
+        "id": "6vU2xYBb5WU0xc094Yl9E4",
+        "type": "Entry",
+        "createdAt": "2019-03-30T11:11:29.829Z",
+        "updatedAt": "2019-04-02T12:06:39.993Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 115,
+        "publishedAt": "2019-04-02T12:06:39.993Z",
+        "firstPublishedAt": "2019-03-30T11:13:56.033Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "publishedCounter": 12,
+        "version": 116,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "chapter"
+          }
+        }
+      },
+      "fields": {
+        "chapterName": {
+          "en-US": "Before You Start"
+        },
+        "chapterSlug": {
+          "en-US": "before-you-start"
+        },
+        "chapterSections": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "zqHnkie6wxSRX1kif2Ba9"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "4rlZfm1INvWFvrpKIbCZzU"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "4R1qoHbfyPeVBJM5emnzXF"
+              }
+            }
+          ]
+        },
+        "chapterCopy": {
+          "en-US": {
+            "nodeType": "document",
+            "data": {
+            },
+            "content": [
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "This is text that we can use to add an introduction to any chapter.",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": "  The individual chapter sections will be rendered thereafter.  ",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": "Unfortunately due to a potential bug",
+                    "marks": [
+                      {
+                        "type": "underline"
+                      }
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": " in contentful's gatsby plugin, embedded entries do not render properly using the rich text renderer, or else we could embed them around chapter content ",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": "here",
+                    "marks": [
+                      {
+                        "type": "italic"
+                      }
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": ".",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ],
+                "data": {
+                }
+              }
+            ]
+          }
+        },
+        "course": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "a2LDF8Nr0Bc13eVLoqAQU"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "ygudoxdn7esm"
+          }
+        },
+        "id": "zqHnkie6wxSRX1kif2Ba9",
+        "type": "Entry",
+        "createdAt": "2019-03-30T11:12:19.890Z",
+        "updatedAt": "2019-04-02T14:54:35.534Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 37,
+        "publishedAt": "2019-04-02T14:54:35.534Z",
+        "firstPublishedAt": "2019-03-30T11:13:28.148Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 38,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "chapterSection"
+          }
+        }
+      },
+      "fields": {
+        "sectionTitle": {
+          "en-US": "The First Step "
+        },
+        "sectionCopy": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec nunc laoreet, venenatis tortor vel, volutpat ipsum. ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "value": "Nam fringilla tincidunt placerat.",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": " Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis id urna eget arcu facilisis facilisis. ",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Morbi vulputate, turpis nec commodo malesuada, lectus lorem semper sem, ut tincidunt velit risus ut lorem. Pellentesque sagittis, massa sit amet pellentesque gravida, purus diam fringilla augue, a convallis ipsum magna placerat felis. Praesent ac consequat nunc. Phasellus aliquam faucibus dignissim. Proin in sagittis est.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Proin urna nulla, porttitor sit amet tempor non, gravida quis tellus. Sed ut mauris augue. Duis a ipsum et ligula feugiat vestibulum vitae ut dui. Quisque lacinia sit amet risus ut aliquet. Etiam mauris ante, pharetra eu libero nec, suscipit pretium turpis. Ut at ultricies ligula. Ut nec nisl ut neque ornare convallis at et nulla. Mauris sed odio pellentesque, luctus mauris in, rhoncus lorem. Cras a tristique nisi.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "\n\n",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "sectionSlug": {
+          "en-US": "the-first-step"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "ygudoxdn7esm"
+          }
+        },
+        "id": "4rlZfm1INvWFvrpKIbCZzU",
+        "type": "Entry",
+        "createdAt": "2019-03-30T11:14:38.374Z",
+        "updatedAt": "2019-04-02T14:54:17.570Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 18,
+        "publishedAt": "2019-04-02T14:54:17.570Z",
+        "firstPublishedAt": "2019-03-30T11:15:01.178Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 19,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "chapterSection"
+          }
+        }
+      },
+      "fields": {
+        "sectionTitle": {
+          "en-US": "The Second Step"
+        },
+        "sectionCopy": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Morbi convallis cursus posuere. Sed suscipit fringilla interdum. Cras ut tellus nec dolor vestibulum hendrerit a in tellus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla volutpat sem sit amet urna consectetur iaculis. Morbi a pharetra erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In neque nisi, ultrices vel nulla at, placerat ultrices metus. Aliquam dictum nisi et nibh fringilla, ut sollicitudin erat aliquet. Curabitur sit amet odio blandit, condimentum dui eget, congue orci. Ut quis interdum purus.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Etiam lacinia magna arcu, sit amet venenatis dolor facilisis id. Mauris cursus bibendum leo, a semper justo fermentum eget. Nullam convallis quam et lectus tempus, quis ultrices dui vehicula. Ut pretium nunc urna, quis tincidunt massa pharetra sagittis. Phasellus id sem ipsum.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "\n\n",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "sectionSlug": {
+          "en-US": "the-second-step"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "ygudoxdn7esm"
+          }
+        },
+        "id": "4R1qoHbfyPeVBJM5emnzXF",
+        "type": "Entry",
+        "createdAt": "2019-04-01T21:02:37.048Z",
+        "updatedAt": "2019-04-02T14:53:37.978Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 34,
+        "publishedAt": "2019-04-02T14:53:37.978Z",
+        "firstPublishedAt": "2019-04-01T21:04:10.406Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 35,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "chapterSection"
+          }
+        }
+      },
+      "fields": {
+        "sectionTitle": {
+          "en-US": "The Third Step"
+        },
+        "sectionCopy": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec nunc laoreet, venenatis tortor vel, volutpat ipsum. Nam fringilla tincidunt placerat. ",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "Proin urna nulla, porttitor sit amet tempor non, gravida quis tellus. Sed ut mauris augue. Duis a ipsum et ligula feugiat vestibulum vitae ut dui. ",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "Nunc velit urna, eleifend eu leo a, vestibulum interdum sem. Vivamus ac volutpat ipsum. Proin consectetur justo commodo velit sagittis, et porta lectus convallis. \n\n\n\n",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  }
+                ],
+                "nodeType": "unordered-list"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "sectionSlug": {
+          "en-US": "the-third-step"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "ygudoxdn7esm"
+          }
+        },
+        "id": "641QaFumevIQ3AAHNsUYKM",
+        "type": "Entry",
+        "createdAt": "2019-04-02T19:09:09.510Z",
+        "updatedAt": "2019-04-02T19:15:10.825Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 40,
+        "publishedAt": "2019-04-02T19:15:10.825Z",
+        "firstPublishedAt": "2019-04-02T19:15:10.825Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 41,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "chapter"
+          }
+        }
+      },
+      "fields": {
+        "chapterName": {
+          "en-US": "Why Invest in Cryptocurrency"
+        },
+        "chapterSlug": {
+          "en-US": "why-invest-in-cryptocurrency"
+        },
+        "chapterSections": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "4C3rxwKOAMNQ7ISU81XGZ4"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "6aMxr3nproZzDF4tIJ7YfP"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "usc6c1baIHTYKUkPKh2Xo"
+              }
+            }
+          ]
+        },
+        "chapterCopy": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "It goes without saying that different people invest for their own reasons and, most of them, have to do with the simple desire to make a profit.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "However, there are several other reasons for which buyers and sellers, as well as investors, get involved in the cryptocurrency market. Some of the most common reasons include:",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "course": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "a2LDF8Nr0Bc13eVLoqAQU"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "ygudoxdn7esm"
+          }
+        },
+        "id": "4C3rxwKOAMNQ7ISU81XGZ4",
+        "type": "Entry",
+        "createdAt": "2019-04-02T19:12:13.800Z",
+        "updatedAt": "2019-04-02T19:13:06.809Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 19,
+        "publishedAt": "2019-04-02T19:13:06.809Z",
+        "firstPublishedAt": "2019-04-02T19:13:06.809Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 20,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "chapterSection"
+          }
+        }
+      },
+      "fields": {
+        "sectionTitle": {
+          "en-US": "Portfolio Diversification"
+        },
+        "sectionSlug": {
+          "en-US": "portfolio-diversification"
+        },
+        "sectionCopy": {
+          "en-US": {
+            "nodeType": "document",
+            "data": {
+            },
+            "content": [
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "“Never put all of your eggs in one basket” is a saying that fits the investment world perfectly. When it comes to diversification, there are quite a lot of different approaches you can go about.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ],
+                "data": {
+                }
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Adding cryptocurrencies to your investment portfolio is one of the ways that you can balance it. It’s also worth noting that the industry is particularly different from traditional ones and it could substantially increase the potential of maximizing your portfolio’s overall growth.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ],
+                "data": {
+                }
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "While the cryptocurrency market has currently entered a bear market and the prices are depreciating, the high volatility and the chance of massive gains upwards of 100% are still why a lot of investors are buying cryptocurrency in the first place.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ],
+                "data": {
+                }
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "In fact, ",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": "Bitcoinist ",
+                    "marks": [
+                      {
+                        "type": "italic"
+                      }
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": "recently ",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "hyperlink",
+                    "content": [
+                      {
+                        "nodeType": "text",
+                        "value": "compared",
+                        "marks": [
+                        ],
+                        "data": {
+                        }
+                      }
+                    ],
+                    "data": {
+                      "uri": "https://bitcoinist.com/nocoiners-investing-in-bitcoin-is-gambling-better-go-with-these-stocks/"
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": " the performance of Bitcoin to three traditional stock market companies – Amazon, JD.com, and iQiyi. It turns out that Bitcoin dwarfs all of them in terms of financial growth, outperforming even the most popular FAANG stocks over the years. Another great reason for buying cryptocurrency.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ],
+                "data": {
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "ygudoxdn7esm"
+          }
+        },
+        "id": "6aMxr3nproZzDF4tIJ7YfP",
+        "type": "Entry",
+        "createdAt": "2019-04-02T19:13:13.583Z",
+        "updatedAt": "2019-04-02T19:13:46.462Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 16,
+        "publishedAt": "2019-04-02T19:13:46.462Z",
+        "firstPublishedAt": "2019-04-02T19:13:46.462Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 17,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "chapterSection"
+          }
+        }
+      },
+      "fields": {
+        "sectionTitle": {
+          "en-US": "Buying Cryptocurrency is Easy"
+        },
+        "sectionSlug": {
+          "en-US": "buying-cryptocurrency-is-easy"
+        },
+        "sectionCopy": {
+          "en-US": {
+            "nodeType": "document",
+            "data": {
+            },
+            "content": [
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Regardless of whether you want to start buying Bitcoin and Ether, or any other cryptocurrency, it is now easier than ever.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ],
+                "data": {
+                }
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Naturally, as the prices increased and cryptocurrencies became a lot more popular and in demand, companies started to offer a range of different services which provide quick and easy access to the market.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ],
+                "data": {
+                }
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Hence, you can now buy bitcoin and ether using your credit card, debit card, gift cards or you can even purchase bitcoin with cash through physical ",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "hyperlink",
+                    "content": [
+                      {
+                        "nodeType": "text",
+                        "value": "Bitcoin ATMs",
+                        "marks": [
+                        ],
+                        "data": {
+                        }
+                      }
+                    ],
+                    "data": {
+                      "uri": "https://bitcoinist.com/bitcoin-atms-4000-globally/"
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": " or e-money kiosks. However, one must keep an eye out for cryptocurrency exchanges that take commission and transaction fees, which can vary greatly, especially when using a credit card or debit cards.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ],
+                "data": {
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "ygudoxdn7esm"
+          }
+        },
+        "id": "usc6c1baIHTYKUkPKh2Xo",
+        "type": "Entry",
+        "createdAt": "2019-04-02T19:14:09.967Z",
+        "updatedAt": "2019-04-02T19:14:39.014Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 15,
+        "publishedAt": "2019-04-02T19:14:39.014Z",
+        "firstPublishedAt": "2019-04-02T19:14:39.014Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 16,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "chapterSection"
+          }
+        }
+      },
+      "fields": {
+        "sectionTitle": {
+          "en-US": "Increasing Adoption"
+        },
+        "sectionSlug": {
+          "en-US": "increasing-adoption"
+        },
+        "sectionCopy": {
+          "en-US": {
+            "nodeType": "document",
+            "data": {
+            },
+            "content": [
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "It goes without saying that the cryptocurrency market as a whole is still at a very early stage. The above mentioned Bitcoin ATMs, now numbering over 4,000 across the globe, are still hard to come by compared traditional ATMs.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ],
+                "data": {
+                }
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "However, it’s also worth noting that cryptocurrencies have been around for a relatively short amount of time and their popularity exploded only recently.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ],
+                "data": {
+                }
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Furthermore, numerous banks, institutions, countries and even governments have expressed interest in one of Bitcoin’s key component technologies, the blockchain, which suggests that cryptocurrencies are here to stay providing even more reason to purchase bitcoin.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ],
+                "data": {
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "ygudoxdn7esm"
+          }
+        },
+        "id": "5j6HzfFJeXKgi8Kuyh0cAf",
+        "type": "Entry",
+        "createdAt": "2019-04-02T19:15:39.823Z",
+        "updatedAt": "2019-04-04T19:48:57.582Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 69,
+        "publishedAt": "2019-04-04T19:48:57.582Z",
+        "firstPublishedAt": "2019-04-02T19:19:54.406Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "publishedCounter": 15,
+        "version": 70,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "chapter"
+          }
+        }
+      },
+      "fields": {
+        "chapterName": {
+          "en-US": "Buying Cryptocurrency"
+        },
+        "chapterSlug": {
+          "en-US": "buying-cryptocurrency"
+        },
+        "chapterSections": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "12nIn02jxPoBtWBrYn6YKx"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "zA3TQW8HxugsbNCJf9OPt"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "10f0kaLy1dZEraQ0ucP63O"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "FtK6kjf921Go8QdQwS8Lz"
+              }
+            }
+          ]
+        },
+        "chapterCopy": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "course": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "a2LDF8Nr0Bc13eVLoqAQU"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "ygudoxdn7esm"
+          }
+        },
+        "id": "6JBTiddbJ3s49lA4nbma3c",
+        "type": "Entry",
+        "createdAt": "2019-04-02T19:16:57.859Z",
+        "updatedAt": "2019-04-02T19:17:32.838Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 16,
+        "publishedAt": "2019-04-02T19:17:32.838Z",
+        "firstPublishedAt": "2019-04-02T19:17:32.838Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 17,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "chapterSection"
+          }
+        }
+      },
+      "fields": {
+        "sectionTitle": {
+          "en-US": "Buying on Coinbase"
+        },
+        "sectionSlug": {
+          "en-US": "buying-on-coinbase"
+        },
+        "sectionCopy": {
+          "en-US": {
+            "nodeType": "document",
+            "data": {
+            },
+            "content": [
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Coinbase is currently the largest US-based cryptocurrency exchange on the market. It is headquartered in San Francisco.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ],
+                "data": {
+                }
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Buying cryptocurrency on the platform is fairly simple. The first thing you’d have to do is to ",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "hyperlink",
+                    "content": [
+                      {
+                        "nodeType": "text",
+                        "value": "sign up",
+                        "marks": [
+                        ],
+                        "data": {
+                        }
+                      }
+                    ],
+                    "data": {
+                      "uri": "https://www.coinbase.com/join/5639f2b36efb1600f8000295"
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": " for a Coinbase account. This will provide you with a place to store your bitcoin as well as fairly easy payment methods to convert your local currency such as USD or EUR in a bank account into or out of Bitcoin or any other of the supported cryptocurrencies. You can even incorporate a debit card or a credit card into this process for credit or debit.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ],
+                "data": {
+                }
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Once you have created and verified your account, you will have to connect your bank account and then a credit card, debit card or debit cards. There are certain verification steps that you would have to go through in order to be able to fully utilize your account using a credit card.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ],
+                "data": {
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "ygudoxdn7esm"
+          }
+        },
+        "id": "10Mc2FUo6RCfoDAgpHvNOW",
+        "type": "Entry",
+        "createdAt": "2019-04-02T19:17:41.437Z",
+        "updatedAt": "2019-04-02T19:18:06.194Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 15,
+        "publishedAt": "2019-04-02T19:18:06.194Z",
+        "firstPublishedAt": "2019-04-02T19:18:06.194Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 16,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "chapterSection"
+          }
+        }
+      },
+      "fields": {
+        "sectionTitle": {
+          "en-US": "Buying on Binance"
+        },
+        "sectionSlug": {
+          "en-US": "buying-on-binance"
+        },
+        "sectionCopy": {
+          "en-US": {
+            "nodeType": "document",
+            "data": {
+            },
+            "content": [
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "hyperlink",
+                    "content": [
+                      {
+                        "nodeType": "text",
+                        "value": "Binance",
+                        "marks": [
+                        ],
+                        "data": {
+                        }
+                      }
+                    ],
+                    "data": {
+                      "uri": "https://www.binance.com/en"
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": " is a cryptocurrency exchange. In fact, it’s the largest one in the world by means of traded volume and it has been dominating the market for the time being.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ],
+                "data": {
+                }
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "To trade cryptocurrency on Binance, you must first deposit it in your designated cryptocurrency wallet like one of the many hardware wallets with a private key. The exchange supports a broad range of different digital assets, so you don’t have to worry about compatibility.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ],
+                "data": {
+                }
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "While the exchange supports predominantly digital assets, it also allows fiat-to-crypto trading in selected regions. ",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": "Bitcoinist ",
+                    "marks": [
+                      {
+                        "type": "italic"
+                      }
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "hyperlink",
+                    "content": [
+                      {
+                        "nodeType": "text",
+                        "value": "reported",
+                        "marks": [
+                        ],
+                        "data": {
+                        }
+                      }
+                    ],
+                    "data": {
+                      "uri": "https://bitcoinist.com/binance-opens-its-first-fiat-to-crypto-exchange-binance-uganda/"
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": " in October that Binance opened its first fiat-to-crypto exchange in Uganda. The company has also ",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "hyperlink",
+                    "content": [
+                      {
+                        "nodeType": "text",
+                        "value": "partnered",
+                        "marks": [
+                        ],
+                        "data": {
+                        }
+                      }
+                    ],
+                    "data": {
+                      "uri": "https://bitcoinist.com/binance-partners-with-southeast-asian-venture-capital-giant-to-launch-fiat-to-cryptocurrency-exchange-in-singapore/"
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": " up with a Southeastern Asian venture capital giant Vertex Ventures to open a fiat-to-crypto exchange in Singapore.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ],
+                "data": {
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "ygudoxdn7esm"
+          }
+        },
+        "id": "FtK6kjf921Go8QdQwS8Lz",
+        "type": "Entry",
+        "createdAt": "2019-04-02T19:18:31.244Z",
+        "updatedAt": "2019-04-02T19:18:48.627Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 15,
+        "publishedAt": "2019-04-02T19:18:48.627Z",
+        "firstPublishedAt": "2019-04-02T19:18:48.627Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 16,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "chapterSection"
+          }
+        }
+      },
+      "fields": {
+        "sectionTitle": {
+          "en-US": "Buying on Kraken"
+        },
+        "sectionSlug": {
+          "en-US": "buying-on-kraken"
+        },
+        "sectionCopy": {
+          "en-US": {
+            "nodeType": "document",
+            "data": {
+            },
+            "content": [
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "hyperlink",
+                    "content": [
+                      {
+                        "nodeType": "text",
+                        "value": "Kraken",
+                        "marks": [
+                        ],
+                        "data": {
+                        }
+                      }
+                    ],
+                    "data": {
+                      "uri": "https://www.kraken.com/"
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": " is another cryptocurrency exchange used to buy or sell cryptocurrency. Unlike Binance however, it does allow funding of your account via fiat currencies. So, the first thing you’d have to do is to open an account.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ],
+                "data": {
+                }
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Once you are done, you need to navigate to the Funding page of Kraken and select the deposit option and go to the USD (or EUR for Europeans) page. If you haven’t already, you should accept the domestic USD deposit Terms of Service.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ],
+                "data": {
+                }
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "After that, you should select the option to do a US domestic wire bank transfer in order to copy your domestic USD deposit wire transfer details.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ],
+                "data": {
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "ygudoxdn7esm"
+          }
+        },
+        "id": "10f0kaLy1dZEraQ0ucP63O",
+        "type": "Entry",
+        "createdAt": "2019-04-02T19:19:07.248Z",
+        "updatedAt": "2019-04-02T19:19:28.950Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 15,
+        "publishedAt": "2019-04-02T19:19:28.950Z",
+        "firstPublishedAt": "2019-04-02T19:19:28.950Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 16,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "chapterSection"
+          }
+        }
+      },
+      "fields": {
+        "sectionTitle": {
+          "en-US": "Buying with Cash"
+        },
+        "sectionSlug": {
+          "en-US": "buying-with-cash"
+        },
+        "sectionCopy": {
+          "en-US": {
+            "nodeType": "document",
+            "data": {
+            },
+            "content": [
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Buying bitcoin with cash has a few distinct advantages compared to purchasing them on a cryptocurrency exchange or bank transfers.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ],
+                "data": {
+                }
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "For once, cash purchases are obviously a lot more private. Unlike using a regular cryptocurrency exchange for buying bitcoin or learning how to buy cryptocurrencies using a bank transfer, you won’t necessarily have to reveal personal information and submitting a wide range of documents for that matter.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ],
+                "data": {
+                }
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Furthermore, cash purchases are faster for those of you who are first-time buyers learning to buy cryptocurrencies — or have not set up a crypto wallet address or other payment methods like a bank transfer.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ],
+                "data": {
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "ygudoxdn7esm"
+          }
+        },
+        "id": "6ZKnGcdLhzkuTwyHNO9was",
+        "type": "Entry",
+        "createdAt": "2019-04-03T18:13:53.636Z",
+        "updatedAt": "2019-04-04T08:48:56.395Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 20,
+        "publishedAt": "2019-04-04T08:48:56.395Z",
+        "firstPublishedAt": "2019-04-03T18:18:25.842Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 21,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "chapter"
+          }
+        }
+      },
+      "fields": {
+        "chapterName": {
+          "en-US": "Dummy Chapter"
+        },
+        "chapterSlug": {
+          "en-US": "dummy-chapter"
+        },
+        "chapterSections": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "6JBTiddbJ3s49lA4nbma3c"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "Wy3Q1eKw9GXyivfrsZGoR"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "FtK6kjf921Go8QdQwS8Lz"
+              }
+            }
+          ]
+        },
+        "chapterCopy": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Here's some dummy chapter intro content.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "course": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "a2LDF8Nr0Bc13eVLoqAQU"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "ygudoxdn7esm"
+          }
+        },
+        "id": "Wy3Q1eKw9GXyivfrsZGoR",
+        "type": "Entry",
+        "createdAt": "2019-04-03T18:14:54.518Z",
+        "updatedAt": "2019-04-03T18:18:11.429Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 25,
+        "publishedAt": "2019-04-03T18:18:11.429Z",
+        "firstPublishedAt": "2019-04-03T18:18:11.429Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 26,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "chapterSection"
+          }
+        }
+      },
+      "fields": {
+        "sectionTitle": {
+          "en-US": "Dummy Chapter Content Section"
+        },
+        "sectionSlug": {
+          "en-US": "dummy-chapter-content-section"
+        },
+        "sectionCopy": {
+          "en-US": {
+            "nodeType": "document",
+            "data": {
+            },
+            "content": [
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "If you have assets that are used more than once in your application and are scalable, you can use 9-patch scaling (e.g., for buttons). Things such as icons will probably not scale properly, so, unfortunately, you have to resize them manually for all the resolutions. The 9-patch guide is always 1 px thick and must be black (#000000); otherwise it won’t work. Your slice will always be 2 px bigger than the asset (1 px left and right and/or at the top and bottom). Thus, if your asset is 48x48 px, your slice will be 50x50 px. You can’t downscale 9-patch images, so you have to deliver them at the smallest size possible. This is also better for the overall performance of the application. You can use the Draw9Patch tool from Android to easily create or check your 9-patch images. For more specific information on 9-patch scaling and/or downloading the Draw9Patch tool, check the ",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "hyperlink",
+                    "content": [
+                      {
+                        "nodeType": "text",
+                        "value": "Android Developers",
+                        "marks": [
+                        ],
+                        "data": {
+                        }
+                      }
+                    ],
+                    "data": {
+                      "uri": "http://developer.android.com/tools/help/draw9patch.html"
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": " website. You can also check ",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "hyperlink",
+                    "content": [
+                      {
+                        "nodeType": "text",
+                        "value": "Simple nine-patch generator",
+                        "marks": [
+                        ],
+                        "data": {
+                        }
+                      }
+                    ],
+                    "data": {
+                      "uri": "https://romannurik.github.io/AndroidAssetStudio/nine-patches.html#&sourceDensity=320&name=example"
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": ".",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ],
+                "data": {
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "ygudoxdn7esm"
+          }
+        },
+        "id": "12nIn02jxPoBtWBrYn6YKx",
+        "type": "Entry",
+        "createdAt": "2019-04-04T13:35:57.298Z",
+        "updatedAt": "2019-04-04T13:36:50.343Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 36,
+        "publishedAt": "2019-04-04T13:36:50.343Z",
+        "firstPublishedAt": "2019-04-04T13:36:50.343Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 37,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "topicsListComponent"
+          }
+        }
+      },
+      "fields": {
+        "componentName": {
+          "en-US": "Understanding Crypto Topics"
+        },
+        "sectionSlug": {
+          "en-US": "understanding-crypto-topics"
+        },
+        "topicsComponentHeadline": {
+          "en-US": "Topics In This Section"
+        },
+        "topicsComponentList": {
+          "en-US": {
+            "nodeType": "document",
+            "data": {
+            },
+            "content": [
+              {
+                "nodeType": "unordered-list",
+                "content": [
+                  {
+                    "nodeType": "list-item",
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "Introduction",
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "data": {
+                            }
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": ": What is the blockchain and what are cryptocurrencies?",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
+                          }
+                        ],
+                        "data": {
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "nodeType": "list-item",
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "Impact",
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "data": {
+                            }
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": ": How blockchain can impact your life",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
+                          }
+                        ],
+                        "data": {
+                        }
+                      }
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "list-item",
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "Accounts",
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "data": {
+                            }
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": ": What accounts/products should I sign up for and use?",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
+                          }
+                        ],
+                        "data": {
+                        }
+                      }
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "list-item",
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "Wallets & keys",
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "data": {
+                            }
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": ": Best practice for staying safe",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
+                          }
+                        ],
+                        "data": {
+                        }
+                      }
+                    ],
+                    "data": {
+                    }
+                  }
+                ],
+                "data": {
+                }
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "data": {
+                    },
+                    "value": "",
+                    "marks": [
+                    ]
+                  }
+                ],
+                "data": {
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "ygudoxdn7esm"
+          }
+        },
+        "id": "zA3TQW8HxugsbNCJf9OPt",
+        "type": "Entry",
+        "createdAt": "2019-04-04T19:26:26.776Z",
+        "updatedAt": "2019-04-04T19:31:40.573Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 30,
+        "publishedAt": "2019-04-04T19:31:40.573Z",
+        "firstPublishedAt": "2019-04-04T19:28:26.468Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 31,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "cardsComponent"
+          }
+        }
+      },
+      "fields": {
+        "componentName": {
+          "en-US": "Buying Crypto Cards"
+        },
+        "sectionSlug": {
+          "en-US": "buying-crypto-cards"
+        },
+        "cardItems": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "6uvPoIjuG2zJhJNJ66NY2m"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "3DBQrrhn5EHmobINxPGXT8"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "67TtTriqqBXykOqmPAMUzl"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "ygudoxdn7esm"
+          }
+        },
+        "id": "6uvPoIjuG2zJhJNJ66NY2m",
+        "type": "Entry",
+        "createdAt": "2019-04-04T19:26:45.685Z",
+        "updatedAt": "2019-04-04T20:44:55.606Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 40,
+        "publishedAt": "2019-04-04T20:44:55.606Z",
+        "firstPublishedAt": "2019-04-04T19:28:07.163Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 41,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "card"
+          }
+        }
+      },
+      "fields": {
+        "cardName": {
+          "en-US": "Tech Enthusiats"
+        },
+        "cardHeadline": {
+          "en-US": "Tech Enthusiasts"
+        },
+        "cardImage": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "BSkmC3ylMsvg8g9QX2xdy"
+            }
+          }
+        },
+        "cardCopy": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Proponents of Web 3.0 believe decentralization is inevitable.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "ygudoxdn7esm"
+          }
+        },
+        "id": "3DBQrrhn5EHmobINxPGXT8",
+        "type": "Entry",
+        "createdAt": "2019-04-04T19:28:38.414Z",
+        "updatedAt": "2019-04-04T19:29:50.239Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 19,
+        "publishedAt": "2019-04-04T19:29:50.239Z",
+        "firstPublishedAt": "2019-04-04T19:29:50.239Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 20,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "card"
+          }
+        }
+      },
+      "fields": {
+        "cardName": {
+          "en-US": "Traditional Finance"
+        },
+        "cardHeadline": {
+          "en-US": "Traditional Finance"
+        },
+        "cardImage": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "BSkmC3ylMsvg8g9QX2xdy"
+            }
+          }
+        },
+        "cardCopy": {
+          "en-US": {
+            "nodeType": "document",
+            "data": {
+            },
+            "content": [
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Cryptocurrencies represent a new age financial asset class with substantial upside.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ],
+                "data": {
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "ygudoxdn7esm"
+          }
+        },
+        "id": "67TtTriqqBXykOqmPAMUzl",
+        "type": "Entry",
+        "createdAt": "2019-04-04T19:29:57.431Z",
+        "updatedAt": "2019-04-04T19:30:54.048Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 26,
+        "publishedAt": "2019-04-04T19:30:54.048Z",
+        "firstPublishedAt": "2019-04-04T19:30:54.048Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 27,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "card"
+          }
+        }
+      },
+      "fields": {
+        "cardName": {
+          "en-US": "Spec HODlers"
+        },
+        "cardHeadline": {
+          "en-US": "Speculative HODlers"
+        },
+        "cardImage": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "BSkmC3ylMsvg8g9QX2xdy"
+            }
+          }
+        },
+        "cardCopy": {
+          "en-US": {
+            "nodeType": "document",
+            "data": {
+            },
+            "content": [
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "I still don't really get this, but if there's a chance that it's the next big thing, I want to be in on it!",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ],
+                "data": {
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "assets": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "ygudoxdn7esm"
+          }
+        },
+        "id": "BSkmC3ylMsvg8g9QX2xdy",
+        "type": "Asset",
+        "createdAt": "2019-04-04T08:48:09.620Z",
+        "updatedAt": "2019-04-04T19:16:08.167Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 53,
+        "publishedAt": "2019-04-04T19:16:08.167Z",
+        "firstPublishedAt": "2019-04-04T19:15:43.910Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 54,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Card Image - Bitcoin Brain"
+        },
+        "description": {
+          "en-US": "Bitcoin in the Brain"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/ygudoxdn7esm/BSkmC3ylMsvg8g9QX2xdy/fd9f1c01787e29e017c66f09c10ff24e/bitcoin.svg",
+            "details": {
+              "size": 5604,
+              "image": {
+                "width": 402,
+                "height": 402
+              }
+            },
+            "fileName": "bitcoin.svg",
+            "contentType": "image/svg+xml"
+          }
+        }
+      }
+    }
+  ],
+  "locales": [
+    {
+      "name": "English (United States)",
+      "code": "en-US",
+      "fallbackCode": null,
+      "default": true,
+      "contentManagementApi": true,
+      "contentDeliveryApi": true,
+      "optional": false,
+      "sys": {
+        "type": "Locale",
+        "id": "3rEDKZn67Mc4gGOzNjIBsn",
+        "version": 1,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "ygudoxdn7esm"
+          }
+        },
+        "environment": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Environment",
+            "id": "master"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "createdAt": "2019-03-30T10:35:20Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5VvU5LZNGXObhMfonOX4Dy"
+          }
+        },
+        "updatedAt": "2019-03-30T10:35:20Z"
+      }
+    }
+  ],
+  "webhooks": [
+  ],
+  "roles": [
+  ]
+}

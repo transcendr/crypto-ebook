@@ -1,0 +1,122 @@
+@import "./shared.module.scss";
+
+$root: topics_component;
+$screen-transition-max: 1024px;
+$screen-transition-min: 1025px;
+
+.#{$root} {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  /* Additionals */
+  border-style: solid;
+  border-width: 1px;
+  border-color: $c-grey-light;
+  box-shadow: 3px 3px 4px 0 $c-grey-light;
+
+  @media (max-width: $screen-transition-max) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  &__column {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+
+    &_left {
+      padding: 30px;
+      background-color: #389cff;
+      @media (max-width: $screen-transition-max) {
+        padding: 0 10px 10px !important;
+      }
+    }
+
+    &_right {
+      padding: 25px 30px 30px;
+    }
+  }
+
+  &__dt_chapter_info {
+    @media (max-width: $screen-transition-max) {
+      display: none;
+    }
+  }
+
+  &__mobi_chapter_info {
+    @media (min-width: $screen-transition-min) {
+      display: none;
+    }
+    text-align: center;
+  }
+
+  &__chapter_number {
+    color: #fff;
+    font-size: 3.3rem;
+    line-height: 1em;
+    margin: 20px 0 10px 0;
+    font-weight: bold;
+    @media (max-width: $screen-transition-max) {
+      font-size: 3rem;
+    }
+  }
+
+  &__chapter_name {
+    margin: 20px 0 10px 0;
+    color: #fff;
+    font-size: 1.3rem;
+    line-height: 1em;
+    font-weight: 600;
+    @media (max-width: $screen-transition-max) {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__headline {
+    margin: 0 0 10px 0;
+    padding-bottom: 15px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1em;
+    text-align: center;
+    @media (max-width: $screen-transition-max) {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__list_copy > ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__list_copy > ul li {
+    background-image: url("/assets/single-berry-color.svg");
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 14px;
+    padding-left: 25px;
+    &::before {
+      background-color: transparent;
+    }
+  }
+
+  &__list_copy > ul li p {
+    padding-bottom: 15px;
+    font-size: 1rem;
+    line-height: 1.5em;
+  }
+}

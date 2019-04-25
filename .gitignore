@@ -65,3 +65,6 @@ README.html
 
 .vscode
 .contentful.json
+
+contentful-export/config.json
+contentful-export/import-config.json
